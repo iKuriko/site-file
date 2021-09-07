@@ -2,23 +2,23 @@
 # Site Settings
 
 baseURL = "https://ikuriko.github.io"
-title = "Hugo Theme MemE"
-languageCode = "zh-Hans"
-hasCJKLanguage = false
+title = "ikuriko"
+languageCode = "zh-CN"
+hasCJKLanguage = true
 # Copyright information (Markdown supported)
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
 
 # Name of theme
 theme = "meme"
 
-# github.io
+# public push dir
 publishDir = "../public"
 
 # `hugo new` automatically opened text editor
 newContentEditor = ""
 
 # i18n
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh "
 defaultContentLanguageInSubdir = false
 
 # Pluralize titles in lists?
@@ -105,13 +105,13 @@ uglyURLs = false
     # Email
     email = "ikuriko@qq.com"
     # Motto or introduction
-    motto = "Viva La Vida"
+    motto = "Mosi Mita"
     # Avatar
     avatar = "/icons/apple-touch-icon.png"
     # Personal website, default: baseURL
     website = "https://ikuriko.github.io"
     # Twitter
-    twitter = "callousmaster"
+    twitter = "akur1ko"
 
 # Related content
 [related]
@@ -214,25 +214,25 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         url = "/posts/"
-        name = "Posts"
+        name = "文章"
         weight = 2
         pre = "internal"
         post = "archive"
     [[menu.main]]
         url = "/categories/"
-        name = "Categories"
+        name = "分类"
         weight = 3
         pre = "internal"
         post = "th"
     [[menu.main]]
-        url = "/tags/"
-        name = "Tags"
-        weight = 4
+        url = "/archives/"
+        name = "归档"
+        weight = 2
         pre = "internal"
-        post = "tags"
+        post = "archive"
     [[menu.main]]
         url = "/about/"
-        name = "About"
+        name = "关于"
         weight = 5
         pre = "internal"
         post = "user-circle"
@@ -360,11 +360,11 @@ uglyURLs = false
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
-    siteCreatedTime = "1969-07-20T20:17:43+00:00"
+    siteCreatedTime = "2016-09-20T20:17:43+00:00"
     # ATTENTION: keep this format, change
     #            the number
 
-    #siteTwitter = "callousmaster"
+    siteTwitter = "akur1ko"
     # Note: used for Twitter Cards
 
 
