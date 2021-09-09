@@ -4,7 +4,7 @@ date: 2021-09-09T16:56:06+08:00
 draft: true
 ---
 
-![vim键盘图](../images/vim_jianpantu.jpg)
+![vim键盘图](/images/vim_jianpantu.jpg)
 <font size=3px>
 ### 命令模式：  
 u    //撤销  
