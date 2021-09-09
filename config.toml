@@ -220,6 +220,7 @@ uglyURLs = false
         weight = 5
         pre = "internal"
         post = "user-circle"
+        identifier = "about"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
@@ -359,7 +360,7 @@ uglyURLs = false
     #      Open Graph、Atom、RSS
 
     # 站点的创建时间
-    siteCreatedTime = "2016-09-20T20:17:43+00:00"
+    siteCreatedTime = "2020-09-20T20:17:43+00:00"
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
@@ -754,7 +755,7 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 是否在首页开启
-    enablePostMetaInHome = false
+    enablePostMetaInHome = true
     # 说明：仅对「文章摘要」和「普通页面」
     #      首页布局有效
 
@@ -1106,14 +1107,14 @@ uglyURLs = false
     msgIcon = "info"
 
     # 是否显示反馈链接
-    displayFeedback = true
+    displayFeedback = false
     # 反馈链接的图标
     feedbackIcon = "question"
     # 反馈链接的文本
     feedbackText = "Feedback"
 
     # 是否显示编辑链接
-    displayEditLink = true
+    displayEditLink = false
     # 编辑链接的图标
     editIcon = "edit"
     # 编辑链接的文本

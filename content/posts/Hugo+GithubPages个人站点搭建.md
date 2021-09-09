@@ -31,7 +31,7 @@ hugo new site blog
 
 进入`blog`目录安装主题
 
-```bash
+```
 cd blog
 ```
 
@@ -46,7 +46,7 @@ git init
 git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
 ```
 
-将`config.toml`替换为示例配置
+将主题文件`config.toml`替换为示例配置
 
 ```bash
 mv config.toml config.toml.bak
@@ -60,6 +60,8 @@ cp themes/meme/config-examples/en/config.toml config.toml
 
 ```bash
 hugo new “posts/test.md”
+```
+```bash
 hugo new "about/_index.md"
 ```
 
@@ -79,14 +81,14 @@ hugo server -D
 
 创建一个存储仓库，在仓库启用Github Pages
 
-设置你的Github配置
+在本地配置你的Github信息
 
 ```bash
 $ git config --global user.name "username"
 $ git config --global user.email "useremail"
 ```
 
-注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
+<font color=red>注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</font>
 
 生成SSH密钥对
 
@@ -98,7 +100,7 @@ $ ssh-keygen -t rsa -b 4096 -C "useremail"
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-将生成的密钥复制，去Github上设置一个新的密钥对[New SSH key](https://github.com/settings/keys)
+将生成的密钥复制，去 Github 上设置一个新的密钥对 [New SSH key](https://github.com/settings/keys)
 
 测试连接
 
@@ -108,7 +110,7 @@ ssh -T git@github.com
 
 
 
-将Github仓库克隆到本地
+将Github仓库克隆到本地的 ikuriko_blog 文件夹
 
 ```bash
 git clone https://github.com/iKuriko/ikuriko.github.io.git ikuriko_blog
@@ -138,7 +140,7 @@ git remote add origin git@github.com:iKuriko/ikuriko.github.io.git
 git add -A
 ```
 
-提交到本地仓库，标签为`第一次提交`
+提交到本地仓库，标签为`first commit`
 
 ```bash
 git commit -m "first commit"
@@ -170,6 +172,54 @@ publishDir = "../ikuriko_blog"
 hugo -D
 ```
 
-使用上面的`git`命令推送到远程仓库，Success！
+再次使用上面的<font color=red> git </font>命令将生成文件推送到远程仓库
+
+```bash
+git add -A
+
+git commit -m "new"
+
+git push -u origin main
+```
+
+Success！
 
 访问你的Github Page
+
+https://ikuriko.github.io
+
+
+##### PS:Git 的基本使用
+
+查看当前仓库的状态
+
+```bash
+git status
+```
+
+添加并提交改动
+
+```bash
+git add <文件> <文件> ……
+git commit -m "first commit"
+```
+
+* <font color=red size=5fx>`git add -A`</font>的意思是一次添加所有文件。
+* <font color=red size=5fx>`-m`</font> 的意思是此次提交的修改说明
+
+查看所有的 commit 历史
+
+```bash
+git log
+```
+
+查看远程仓库，以及与本地仓库的关系
+```bash
+git remote show origin
+```
+
+抓取远程的一个分支到本地
+
+```bash
+git fetch <remote_name> <branch_name>
+```
