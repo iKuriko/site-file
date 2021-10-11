@@ -207,13 +207,13 @@ uglyURLs = false
         weight = 2
         pre = "internal"
         post = "archive"
-    [[menu.main]]
-        url = "/archives/"
-        name = "归档"
-        weight = 3
-        pre = "internal"
-        post = "archive"
-        identifier = "archive"
+#    [[menu.main]]
+#        url = "/archives/"
+#        name = "归档"
+#        weight = 3
+#        pre = "internal"
+#        post = "archive"
+#        identifier = "archive"
 #    [[menu.main]]
 #        url = "/tags/"
 #        name = "标签"
