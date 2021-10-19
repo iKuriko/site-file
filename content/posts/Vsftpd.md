@@ -4,9 +4,9 @@ date: 2021-10-14T15:16:25+08:00
 draft: true
 ---
 
-[TOC]
 
-## 简介
+
+### 简介
 
 　　为了解决在复杂多样的设备之间传输文件，文件传输协议（FTP）诞生了。由于FTP协议是明文传输，不够可靠。所以为了满足协议的安全性，出现了**vsftpd（very secure ftp daemon，非常安全的FTP守护进程）**  
 
@@ -19,7 +19,7 @@ draft: true
 
 
 
-## 认证方式
+### 认证方式
 
 - **匿名用户模式**
 
@@ -36,12 +36,12 @@ draft: true
 
 
 
-## 安装Vsftpd
+### 安装Vsftpd
 
 当前环境为CentOS Linux 8.4，配置软件仓库
 
 ```bash
-mv /etc/yum.repos.d/CentOS-Linux-BaseOS.repo /etc/yum.repos.d/CentOS-Linux-BaseOS.repo.bak 
+mv /etc/yum.repos.d/CentOS-Linux-BaseOS.repo /etc/yum.repos.d/CentOS-Linux-BaseOS.repo.bak
 curl -o /etc/yum.repos.d/CentOS-Linux-BaseOS.repo https://mirrors.aliyun.com/repo/Centos-8.repo
 dnf clean all
 dnf makecache
@@ -106,7 +106,7 @@ cat /etc/vsftpd/vsftpd.conf
 | chroot_local_user=[YES\|NO]                        | 是否将用户权限禁锢在FTP目录，以确保安全                      |
 | local_max_rate=0                                   | 本地用户最大传输速率（字节/秒），0为不限制                   |
 
-## 配置匿名用户模式
+### 配置匿名用户模式
 
 > vsftpd服务程序默认关闭了匿名登录的方式，我们需要开放匿名用户的上传、下载文件的权限，以及让匿名用户创建、删除、更名文件的权限。不建议在生产环境中使用此种模式
 
@@ -176,7 +176,7 @@ mkdir  /var/ftp/pub
 chown -R ftp /var/ftp/pub/
 ```
 
-<font color=red> *注意：不建议给予父目录/var/ftp属主或777权限，会触发安全保护机制，导致用户无法登录*</font> 
+<font color=red> *注意：不建议给予父目录/var/ftp属主或777权限，会触发安全保护机制，导致用户无法登录*</font>
 
 重启服务
 
@@ -216,7 +216,7 @@ firewall-cmd --reload
 
 
 
-## 配置本地用户模式
+### 配置本地用户模式
 
 > vsftpd服务程序默认关闭了匿名登录的方式，我们需要开放匿名用户的上传、下载文件的权限，以及让匿名用户创建、删除、更名文件的权限。不建议在生产环境中使用此种模式
 
@@ -317,7 +317,7 @@ Ps：这里为什么需要两个同样的文件来禁用登录功能呢，玄机
 
 
 
-## 配置虚拟用户模式
+### 配置虚拟用户模式
 
 安装vsftpd软件包
 
@@ -356,7 +356,7 @@ chmod 600 vuser.db
 #建议删除明文信息文件（可选，怕忘密码可以不删）
 
 ```bash
-rm -rf vuser.list 
+rm -rf vuser.list
 ```
 
 创建virtual本地用户用于和虚拟用户的映射，指定家目录，不允许该用户登录系统
@@ -385,7 +385,7 @@ ls -ld /var/ftproot/
 drwxr-xr-x. 2 virtual virtual 62 Oct 19 15:17 /var/ftproot/
 ```
 
-建立支持虚拟用户的PAM[^ 1:PAM]文件
+建立支持虚拟用户的PAM[^1]文件
 
 
 ```bash
@@ -439,7 +439,7 @@ anon_other_write_enable=YES
 编辑配置文件
 
 ```bash
-vim /etc/vsftpd/vsftpd.conf 
+vim /etc/vsftpd/vsftpd.conf
 ```
 
 ```bash
@@ -510,7 +510,7 @@ firewall-cmd --reload
 
 
 
-## 登录测试
+### 登录测试
 
 - test1只有下载权限
 - test2拥有所有权限
@@ -557,7 +557,7 @@ lftp test1@192.168.88.133:/> exit
 
 [root@localhost ~]# ls			#查看下载到本地的文件，测试完毕无异常
 anaconda-ks.cfg  lookup.txt
-[root@localhost ~]# cat lookup.txt 
+[root@localhost ~]# cat lookup.txt
 hiahia
 [root@localhost ~]# rm -rf lookup.txt
 ```
@@ -589,7 +589,7 @@ drwx------    2 1000     1000            6 Oct 19 07:43 test2
 lftp test2@192.168.88.133:/> exit
 [root@localhost ~]# ls 			#查看下载到本地的文件，测试完毕无异常
 anaconda-ks.cfg  lookup.txt
-[root@localhost ~]# cat lookup.txt 
+[root@localhost ~]# cat lookup.txt
 hiahia
 ```
 
@@ -603,5 +603,4 @@ Vsftpd服务程序登陆后所在目录
 
 
 
-[^1:PAM]: PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。通俗来讲，PAM是一组安全机制的模块，系统管理员可以用来轻易地调整服务程序的认证方式，而不必对应用程序进行任何修改。PAM采取了分层设计（应用程序层、应用接口层、鉴别模块层）的思想
-
+[1]:PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。通俗来讲，PAM是一组安全机制的模块，系统管理员可以用来轻易地调整服务程序的认证方式，而不必对应用程序进行任何修改。PAM采取了分层设计（应用程序层、应用接口层、鉴别模块层）的思想
