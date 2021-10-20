@@ -4,15 +4,15 @@ date: 2021-10-14T15:16:25+08:00
 draft: true
 ---
 
-
+## Vsftpd
 
 ### 简介
 
-　　为了解决在复杂多样的设备之间传输文件，文件传输协议（FTP）诞生了。由于FTP协议是明文传输，不够可靠。所以为了满足协议的安全性，出现了**vsftpd（very secure ftp daemon，非常安全的FTP守护进程）**  
+为了解决在复杂多样的设备之间传输文件，文件传输协议（FTP）诞生了。由于FTP协议是明文传输，不够可靠。所以为了满足传输的安全性，出现了**vsftpd（very secure ftp daemon，非常安全的FTP守护进程）**  
 
 
 
-　　FTP默认使用20、21端口
+FTP默认使用**20**、**21**端口
 
 - 20端口用于数据传输
 - 21端口用于FTP的连接和控制（接受客户端发出的FTP命令和参数）。
@@ -510,7 +510,7 @@ firewall-cmd --reload
 
 
 
-### 登录测试
+### 连接测试
 
 - test1只有下载权限
 - test2拥有所有权限
@@ -603,4 +603,141 @@ Vsftpd服务程序登陆后所在目录
 
 
 
-[1]:PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。通俗来讲，PAM是一组安全机制的模块，系统管理员可以用来轻易地调整服务程序的认证方式，而不必对应用程序进行任何修改。PAM采取了分层设计（应用程序层、应用接口层、鉴别模块层）的思想
+
+
+## TFTP
+
+ 
+
+### 简介
+
+**TFTP（Trivial File Transfer Protocol, 简单文件传输协议）**，基于UDP协议。提供不复杂、开销小的文件传输服务，相当于FTP协议的简化版本。
+
+   
+
+TFTP，不需要客户端的权限认证，减少了带宽和系统的消耗。它的功能较少，甚至不能遍历目录，安全性也不如FTP。但因此在传输琐碎（Trivial）小文件时，效率更高。
+
+
+
+
+
+### 安装TFTP
+
+来安装体验一下，**tftp-server** 提供服务程序 | **tftp**是用于连接的客户端工具 | **xinetd[^2]**是管理程序的服务
+
+   
+
+```
+dnf install tftp-server tftp xinted
+```
+
+ 
+
+安装TFTP软件包后，还需要再xinetd服务程序中将其开启，再RHEL 8 系统中，tftp所对应的配置文件默认不存在，需要根据示例文件（/usr/share/doc/xinetd/sample.conf）自行创建。把底下的配置直接复制进去就OK
+
+ 
+
+```
+vim /etc/xinetd.d/tftp
+```
+
+```
+service tftp
+{
+        socket_type             = dgram
+        protocol                = udp
+        wait                    = yes
+        user                    = root
+        server                  = /usr/sbin/in.tftpd
+        server_args             = -s /var/lib/tftpboot
+        disable                 = no
+        per_source              = 11
+        cps                     = 100 2
+        flags                   = IPv4
+}
+```
+
+ 
+
+重启服务
+
+```
+systemctl restart tftp
+```
+
+开启自启
+
+```
+systemctl enable tftp
+```
+
+重启xinetd管理服务
+
+```
+systemctl restart xinetd
+```
+
+开启自启
+
+```
+systemctl enable xinetd
+```
+
+允许firewall通过udp/69
+
+```
+firewall-cmd --zone=public --permanent --add-port=69/udp
+```
+
+ 重新加载firewall策略生效
+
+```
+firewall-cmd --reload
+```
+
+### 连接测试
+
+新建测试文件，供下载
+
+```
+echo "keke" >> /var/lib/tftpboot/nn
+```
+TFTP的根目录为**/var/lib/tftpboot**，使用tftp客户端尝试连接
+
+```
+[root@localhost ~]# tftp 192.168.88.133
+
+tftp> ls
+
+?Invalid command (无法遍历目录)
+
+tftp> get nn
+
+tftp> quit
+
+[root@localhost ~]# cat nn
+
+keke
+```
+
+tftp命令中可用的参数以及作用
+
+| 参数    | 作用                |
+| ------- | ------------------- |
+| ?       | 帮助信息            |
+| put     | 上传文件            |
+| get     | 下载文件            |
+| verbose | 显示详细的处理信息  |
+| status  | 显示当前的状态信息  |
+| binary  | 使用二进制进行传输  |
+| ascii   | 使用ASCII码进行传输 |
+| timeout | 设置重传的超时时间  |
+| quit    | 退出                |
+
+
+
+
+
+[^1]: PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。通俗来讲，PAM是一组安全机制的模块，系统管理员可以用来轻易地调整服务程序的认证方式，而不必对应用程序进行任何修改。PAM采取了分层设计（应用程序层、应用接口层、鉴别模块层）的思想
+[^2]: 在Linux系统中，TFTP服务是xinetd服务程序来管理的。xinetd服务可以用来管理多种轻量级的网络服务，而且具有强大的日志功能。它专门用于控制那些比较小的应用程序的开启和关闭，有点类似带有独立开关的插线板，想要开启哪个服务，就编辑对应的xinetd配置文件的开关参数。
+
