@@ -7,7 +7,7 @@ draft: true
 
 环境使用软件版本为：Centos7.9_2009 + jdk1.8 + mysql 5.7.34 + python3.6 + tomcat 8.5.69
 
-# Oracle jdk1.8.0_301
+## Oracle jdk1.8.0_301
 #软件包下载地址： https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
 
 解压软件包到opt目录下
@@ -44,7 +44,7 @@ java -version
 
 
 
-# MySQL 5.7.34
+## MySQL 5.7.34
 
 #MySQL软件包下载地址： https://downloads.mysql.com/archives/community/
 
@@ -157,7 +157,7 @@ update user set host = '%' where user = 'root';
 flush privileges;
 ```
 
-# Python 3.6
+## Python 3.6
 
 下载地址： https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz
 
@@ -207,7 +207,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 
-# Tomcat 8.5.69
+## Tomcat 8.5.69
 
 #下载地址： https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.69/
 

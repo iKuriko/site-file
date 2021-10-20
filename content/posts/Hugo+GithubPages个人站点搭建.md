@@ -6,7 +6,7 @@ draft: true
 
 
 
-# hugo 安装
+## Hugo 安装
 
 首先在本地安装[hugo](https://github.com/gohugoio/hugo/releases)，选择适合自己系统的安装包
 
@@ -26,6 +26,8 @@ hugo new site blog
 它会在当前目录，生成一个名为`blog`的文件夹，里面是新建的站点文件
 
 
+
+## 生成静态页面
 
 在生成开始之前，我们需要为hugo安装一个主题，这里选用的是MemE
 
@@ -75,7 +77,7 @@ hugo server -D
 
 
 
-# 推送到Github Pages
+## 推送到Github Pages
 
 首先，你需要拥有一个Github账号
 
@@ -188,8 +190,7 @@ Success！
 
 https://ikuriko.github.io
 
-
-##### PS:Git 的基本使用
+### **PS:Git 的基本使用**
 
 查看当前仓库的状态
 
@@ -204,8 +205,8 @@ git add <文件> <文件> ……
 git commit -m "first commit"
 ```
 
-* <font color=red size=5fx>`git add -A`</font>的意思是一次添加所有文件。
-* <font color=red size=5fx>`-m`</font> 的意思是此次提交的修改说明
+* <font color=red size=3fx>`git add -A`</font>的意思是一次添加所有文件。
+* <font color=red size=3fx>`-m`</font> 的意思是此次提交的修改说明
 
 查看所有的 commit 历史
 
