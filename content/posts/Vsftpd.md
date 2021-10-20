@@ -627,7 +627,7 @@ TFTP，不需要客户端的权限认证，减少了带宽和系统的消耗。�
 
    
 
-```
+```bash
 dnf install tftp-server tftp xinted
 ```
 
@@ -637,11 +637,11 @@ dnf install tftp-server tftp xinted
 
  
 
-```
+```bash
 vim /etc/xinetd.d/tftp
 ```
 
-```
+```bash
 service tftp
 {
         socket_type             = dgram
@@ -661,37 +661,37 @@ service tftp
 
 重启服务
 
-```
+```bash
 systemctl restart tftp
 ```
 
 开启自启
 
-```
+```bash
 systemctl enable tftp
 ```
 
 重启xinetd管理服务
 
-```
+```bash
 systemctl restart xinetd
 ```
 
 开启自启
 
-```
+```bash
 systemctl enable xinetd
 ```
 
 允许firewall通过udp/69
 
-```
+```bash
 firewall-cmd --zone=public --permanent --add-port=69/udp
 ```
 
  重新加载firewall策略生效
 
-```
+```bash
 firewall-cmd --reload
 ```
 
@@ -699,12 +699,12 @@ firewall-cmd --reload
 
 新建测试文件，供下载
 
-```
+```bash
 echo "keke" >> /var/lib/tftpboot/nn
 ```
 TFTP的根目录为**/var/lib/tftpboot**，使用tftp客户端尝试连接
 
-```
+```bash
 [root@localhost ~]# tftp 192.168.88.133
 
 tftp> ls
