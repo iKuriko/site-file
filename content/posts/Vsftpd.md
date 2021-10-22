@@ -305,7 +305,7 @@ firewall-cmd --permanent --zone=public --add-service=ftp
 firewall-cmd --reload
 ```
 
-现在可以使用的本地账户，来登录ftp服务，但为了服务器的安全性，ftp服务默认禁止了大多本地系统用户的登录。如果想要使用root用户登录，删除ftp用户名单（ftpusers和user_list）中的root即可。
+现在可以使用的本地账户，来登录ftp服务，但为了服务器的安全性，ftp服务默认禁止了大多本地系统用户的登录。如果想要使用root用户登录，删除ftp用户黑名单`ftpusers`和`user_list`[^2]中的root即可。    
 
 当然也可以创建一个不允许登录系统的账户，给ftp登录专用
 
@@ -313,7 +313,7 @@ firewall-cmd --reload
 useradd -s /sbin/nologin test
 ```
 
-Ps：这里为什么需要两个同样的文件来禁用登录功能呢，玄机在与user_list上面的一段注释。如果主配置文件中的userlist_deny=YES则user_list变为黑名单，不允许用户登录（此为默认值）。如果主配置文件中的“userlist_deny=NO”则user_list变为白名单，允许名单内的用户登录。  
+
 
 
 
@@ -418,13 +418,13 @@ mkdir /etc/vsftpd/vusers_dir
 cd /etc/vsftpd/vusers_dir
 ```
 
-不给予test1权限
+不给予test1权限，test1只拥有默认的查看和下载权限
 
 ```bash
 touch test1
 ```
 
-给与test2所有权限
+给与test2所有权限，test2能够上传、下载、删除等
 
 ```bash
 vim test2
@@ -432,7 +432,7 @@ vim test2
 
 ```bash
 anon_upload_enable=YES
-anon_mkdir_write_enable=YESbash
+anon_mkdir_write_enable=YES
 anon_other_write_enable=YES
 ```
 
@@ -623,7 +623,7 @@ TFTP，不需要客户端的权限认证，减少了带宽和系统的消耗。�
 
 ### 安装TFTP
 
-来安装体验一下，**tftp-server** 提供服务程序 | **tftp**是用于连接的客户端工具 | **xinetd**[^2]是管理程序的服务
+来安装体验一下，**tftp-server** 提供服务程序 | **tftp**是用于连接的客户端工具 | **xinetd**[^3]是管理程序的服务
 
    
 
@@ -739,5 +739,6 @@ tftp命令中可用的参数以及作用
 
 
 [^1]: PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。通俗来讲，PAM是一组安全机制的模块，系统管理员可以用来轻易地调整服务程序的认证方式，而不必对应用程序进行任何修改。PAM采取了分层设计（应用程序层、应用接口层、鉴别模块层）的思想
-[^2]: 在Linux系统中，TFTP服务是xinetd服务程序来管理的。xinetd服务可以用来管理多种轻量级的网络服务，而且具有强大的日志功能。它专门用于控制那些比较小的应用程序的开启和关闭，有点类似带有独立开关的插线板，想要开启哪个服务，就编辑对应的xinetd配置文件的开关参数。
+[^2]: 这里为什么需要两个同样的文件来禁用登录功能呢，玄机在与`user_list`上面的一段注释。如果主配置文件中的 "userlist_deny=YES" 则 `user_list`文件变为黑名单，不允许用户登录（此为默认值）。如果主配置文件中的 “userlist_deny=NO” 则`user_list`变为白名单，将允许名单内的用户登录。
+[^3]: 在Linux系统中，TFTP服务是xinetd服务程序来管理的。xinetd服务可以用来管理多种轻量级的网络服务，而且具有强大的日志功能。它专门用于控制那些比较小的应用程序的开启和关闭，有点类似带有独立开关的插线板，想要开启哪个服务，就编辑对应的xinetd配置文件的开关参数。
 
