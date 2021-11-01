@@ -26,6 +26,9 @@ ln -s /opt/jdk1.8.0_301/ /opt/jdk
 
 ```bash
 vim /etc/profile
+```
+
+```bash
 #Set the JDK environment variables
 export JAVA_HOME=/opt/jdk
 export JRE_HOME=/opt/jdk/jre
@@ -64,7 +67,7 @@ tar -zxvf mysql-5.7.34-el7-x86_64.tar.gz -C /opt
 创建软连接
 
 ```bash
-ln -s /opt/mysql-5.7.34-el7-x86_64.tar.gz /opt/mysql
+ln -s /opt/mysql-5.7.34-el7-x86_64/ /opt/mysql
 ```
 
 创建用户，-M不指定家目录，-s /sbin/nologin无法登录系统
@@ -84,6 +87,9 @@ chown -R mysql:mysql /data/mysql/
 
 ```bash
 vim /etc/my.cnf
+```
+
+```bash
 [mysqld]
 bind-address=0.0.0.0
 port=3306
@@ -144,6 +150,9 @@ tcp    LISTEN     0      80        *:3306                  *:*                  
 mysql -u root -p
 Enter password:
 mysql>
+```
+
+```sql
 SET PASSWORD = PASSWORD('root');
 ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
 FLUSH PRIVILEGES;
@@ -189,9 +198,12 @@ ln -s /opt/Python-3.6.2/ /opt/python
 添加环境变量，立即生效
 ```bash
 vim /etc/profile
+```
+```bash
 #Set the Python environment variables
 export PATH=$PATH:/opt/python/bin
 ```
+
 ```bash
 source /etc/profile
 ```
@@ -226,17 +238,26 @@ ln -s /opt/apache-tomcat-8.5.69/ /opt/tomcat
 添加环境变量
 
 ```bash
-#vim /opt/tomcat/bin/setclasspath.sh
-#export JAVA_HOME=/opt/jdk
-#export JRE_HOME=/opt/jdk/jre
-#source setclasspath.sh
+vim /opt/tomcat/bin/setclasspath.sh
+```
+
+```bash
+export JAVA_HOME=/opt/jdk
+export JRE_HOME=/opt/jdk/jre
 #已添加环境变量则无需再次添加
+```
+
+```bash
+source setclasspath.sh
 ```
 
 启动tomcat服务
 
 ```bash
 cd /opt/tomcat/bin
+```
+
+```bash
 ./startup.sh
 Using CATALINA_BASE:   /opt/tomcat
 Using CATALINA_HOME:   /opt/tomcat
@@ -246,13 +267,14 @@ Using CLASSPATH:       /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli
 Using CATALINA_OPTS:   
 Tomcat started.
 ```
-开机自启动
+将启动脚本，加入开机自启
 ```bash
 vim /etc/rc.local
 /bin/sh /opt/tomcat/bin/startup.sh &
 ```
 
 tomcat默认监听8080端口
+
 ```bash
 ss -utpln | grep 8080
 tcp    LISTEN     0      100    [::]:8080               [::]:*                   users:(("java",pid=17268,fd=55))
