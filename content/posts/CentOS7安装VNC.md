@@ -33,7 +33,7 @@ systemctl set-default multi-user.target
 然后重启系统即可
 
 ```bash
-shutdown -h now
+shutdown -r now
 ```
 
  
