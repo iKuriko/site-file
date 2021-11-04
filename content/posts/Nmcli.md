@@ -158,8 +158,36 @@ nmcli connection up Bridge
 **配置gretap**
 
 ```bash
-nmcli connection add type ip-tunnel mode gretap remote 172.16.100.100 local 172.16.100.1 ifname gretap01  con-name gretap01 
+nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 172.16.100.1 remote 172.16.100.100 master br0
 ```
+
+参数详解：
+
+add：新建连接
+
+type：连接类型
+
+mode：ip-tunnel的隧道模式
+
+con-name：网络连接名称
+
+ifname：设备接口名称
+
+ip-tunnel.ttl：ttl生命周期
+
+ip-tunnel.input-key：gre隧道的key值（input）
+
+ip-tunnel.output-key：gre隧道的key值（output）
+
+local：本地的IP地址
+
+remote：远程的IP地址
+
+master：隧道加入的网桥（按需添加）
+
+
+
+
 
 配置网卡ipv4地址手动，ipv6地址禁用
 
