@@ -161,6 +161,8 @@ nmcli connection up Bridge
 nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 172.16.100.1 remote 172.16.100.100 master br0
 ```
 
+---
+
 参数详解：
 
 add：新建连接
@@ -185,9 +187,9 @@ remote：远程的IP地址
 
 master：隧道加入的网桥（按需添加）
 
+autoconnect：自动连接  
 
-
-
+---
 
 配置网卡ipv4地址手动，ipv6地址禁用
 
