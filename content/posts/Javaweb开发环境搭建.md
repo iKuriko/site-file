@@ -117,10 +117,11 @@ source /etc/profile
 mysqld --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql/ --datadir=/data/mysql/ --user=mysql --initialize
 ```
 
-查看mysql日志，查看数据库初始密码
+查看mysql日志，查看数据库初始用户和密码（在最后一段）
 
 ```bash
 cat /data/mysql/mysql.err
+
 2021-08-23T14:47:03.946617Z 1 [Note] A temporary password is generated for root@localhost: R4LagOyP26%,
 ```
 
@@ -141,6 +142,7 @@ mysql默认监听3306端口
 
 ```bash
 ss -utpln | grep 3306
+
 tcp    LISTEN     0      80        *:3306                  *:*                   users:(("mysqld",pid=3824,fd=20))
 ```
 
@@ -210,6 +212,7 @@ source /etc/profile
 
 ```
 [root@test1 ~]# python3
+
 Python 3.6.2 (default, Aug 24 2021, 20:05:45)
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -244,8 +247,10 @@ vim /opt/tomcat/bin/setclasspath.sh
 ```bash
 export JAVA_HOME=/opt/jdk
 export JRE_HOME=/opt/jdk/jre
-#已添加环境变量则无需再次添加
+#已在/etc/profile添加过此环境变量则无需再次添加
 ```
+
+立即生效
 
 ```bash
 source setclasspath.sh
@@ -259,6 +264,7 @@ cd /opt/tomcat/bin
 
 ```bash
 ./startup.sh
+
 Using CATALINA_BASE:   /opt/tomcat
 Using CATALINA_HOME:   /opt/tomcat
 Using CATALINA_TMPDIR: /opt/tomcat/temp
@@ -270,6 +276,7 @@ Tomcat started.
 将启动脚本，加入开机自启
 ```bash
 vim /etc/rc.local
+
 /bin/sh /opt/tomcat/bin/startup.sh &
 ```
 
@@ -277,6 +284,7 @@ tomcat默认监听8080端口
 
 ```bash
 ss -utpln | grep 8080
+
 tcp    LISTEN     0      100    [::]:8080               [::]:*                   users:(("java",pid=17268,fd=55))
 ```
 
