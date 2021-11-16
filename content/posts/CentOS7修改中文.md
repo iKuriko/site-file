@@ -39,3 +39,9 @@ LANG=zh_CN.utf8
 source /etc/locale.conf
 ```
 
+也可以直接设置系统语言
+
+```bash
+localectl  set-locale LANG=zh_CN.utf8
+```
+
