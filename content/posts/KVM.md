@@ -6,11 +6,11 @@ draft: true
 
 
 
-## 安装
+## 安装 KVM
 
 
 
-查看CPU是否支持虚拟化
+先查看CPU是否支持虚拟化[^1]
 
 ```bash
 cat /proc/cpuinfo | egrep 'vmx|svm'
@@ -44,7 +44,7 @@ reboot
 
 查看KVM模块是否被正确加载
 
-```
+```bash
 lsmod | grep kvm          #输出以下参数，说明KVM模块已经正确加载
 kvm_intel       162153 0
 kvm          525259 1 kvm_intel       
@@ -72,11 +72,11 @@ systemctl status libvirtd
 
 
 
-## KVM网络
+## 配置 KVM网络
 
 
 
-先删除默认的default网络[^1]
+先删除默认的default网络[^2]
 
 ```bash
 virsh net-destroy default
@@ -94,21 +94,21 @@ Network default has been undefined
 systemctl restart libvirtd
 ```
 
-#开启路由转发
+#按需求选择是否开启路由转发
 
-```
+```bash
 vim /etc/sysctl.conf
 
 net.ipv4.ip_forward = 1    #开启路由转发
 ```
 
-```
+```bash
 sysctl -p                  #立即生效
 ```
 
 
 
-### Bridge 模式
+### 配置 Bridge 模式
 
 宿主机网络配置
 
@@ -138,7 +138,7 @@ ip link set dev br1 up
 vim /tmp/br1.xml
 ```
 
-```bash
+```xml
 <network>
   <name>br1</name>
   <forward mode="bridge"/>
@@ -150,7 +150,7 @@ vim /tmp/br1.xml
 
 
 
-### NAT 模式
+### 配置 NAT 模式
 
 宿主机网络配置
 
@@ -179,7 +179,7 @@ ip link set dev natbr0 up
 vim /tmp/natbr0.xml
 ```
 
-```bash
+```xml
 <network>
  <name>nat</name>
  <bridge name="natbr0"/>
@@ -194,7 +194,7 @@ vim /tmp/natbr0.xml
 
  
 
-### Ovs-br 模式
+### 配置 Ovs-br 模式
 
 宿主机网络配置
 
@@ -210,7 +210,7 @@ ovs-vsctl add-br ovs-br1    #创建ovs网桥
 vim /tmp/ovs-br1.xml
 ```
 
-```bash
+```xml
 <network>
   <name>ovs-br1</name>
   <forward mode="bridge"/>
@@ -221,28 +221,28 @@ vim /tmp/ovs-br1.xml
 
 
 
-重定义与重启网络          
+### 定义 KVM网络
 
 ```bash
 virsh net-define /tmp/br1.xml
 Network BR1 defined from /tmp/br1.xml
 ```
 
-
+启动网络
 
 ```bash
 virsh net-start BR1
 Network BR1 started
 ```
 
- 
+ 自启动网络
 
 ```bash
 virsh net-autostart BR1
 Network BR1 marked as autostarted
 ```
 
- 
+ 查看
 
 ```bash
 virsh net-list
@@ -264,31 +264,19 @@ virsh domiflist pc1
 
 
 
-## 创建虚拟机
+## 创建 KVM虚拟机
 
-安装前要设置环境语言为英文LANG="en_US.UTF-8"，如果是中文的话某些版本可能会报错或乱码。CentOS 7 修改 /etc/locale.conf。（也可以直接参考我之前的文章安装中文语言包）
-
-
-
-图形化控制台
+安装前要设置环境语言为英文LANG="en_US.UTF-8"[^3]
 
 ```bash
-virt-manager
-```
+vim /etc/locale.conf
 
-Ps：服务器未安装图形化则无法开启，但可通过远程连接软件强制开启，
-
-
-
-kvm虚拟机的配置文件位置
-
-```
-/etc/libvirt/qemu/
+LANG="en_US.UTF-8"
 ```
 
 
 
-新建kvm存放目录
+新建kvm存储目录
 
 ```
 mkdir -pv /kvm/store/
@@ -304,9 +292,7 @@ qemu-img create -f qcow2 /kvm/store/CentOS-7.9_01.qcow2 20G
 
 
 
-给与镜像文件权限
-
-ps：特别注意.iso镜像文件一定放到/home 或者在根目录重新创建目录，不然会因为权限报错，无法创建虚拟机。
+给与镜像文件权限，特别注意.iso镜像文件一定放到/home 或者在根目录重新创建目录，不然会因为权限报错，无法创建虚拟机。
 
 ```bash
 chown root:root /iso/CentOS-7-x86_64-Minimal-2009.iso 
@@ -392,64 +378,96 @@ virt-install 参数
 --os-variant=OS_VARIANT（rhel7,winx7,win2k8） # 针对特定操作系统变体进一步优化虚拟机配置（非必要）
 ```
 
-
-
-## 常用命令
+#图形化控制台，服务器未安装图形化则无法开启，但可通过远程连接软件强制开启(不稳定)
 
 ```bash
-virsh list                          # 查看已开启的虚拟机
+virt-manager
+```
 
-virsh list --all                    # 查看所有虚拟机
+#kvm虚拟机的配置文件位置
 
-virsh net-list                      # 查看已开启的虚拟网络
- 
-virsh net-list --all                # 查看所有虚拟网络
-
-virsh net-define default.xml        # 定义kvm网络
-
-virsh net-undefine default          # 删除kvm网络
-
-virsh net-start default             # 启动kvm网络
-
-virsh net-autostart default         # 自启动kvm网络
-
-virsh dumpxml vm-name               # 查看kvm虚拟机配置文件
-
-virsh start vm-name                 # 启动kvm虚拟机
-
-virsh shutdown vm-name              # 关闭kvm虚拟机（正常关机）
-
-virsh destroy vm-name               # 强制关闭虚拟机（非正常关机，相当于直接拔掉电源）
-
-virsh undefine vm-name              # 移除定义kvm虚拟机（只会删除配置文件，不会删除磁盘文件）
-
-virsh define file-name.xml          # 根据xml配置文件定义虚拟机
-
-virsh suspend vm-name               # 挂起虚拟机
-
-virsh resumed vm-name               # 恢复被挂起的虚拟机
-
-virsh autostart vm-name             # 开机自启动kvm虚拟机
-
-virsh console vm-name               # 使用console控制台连接虚拟机
-Ctrl+5 # 从虚拟机登录页面，退出到宿主机命令行页面
-
-virsh dumpxml vm-name > ~/vm.xml    #导出虚拟机的配置文件 
-
-virsh setvcpus working112 --maximum 4 --config   # 更改CPU
-
-virsh setmaxmem working112 1048576 --config      # 更改内存
-
-virsh dominfo working112                         # 查看信息
+```
+/etc/libvirt/qemu/
 ```
 
 
 
-## 克隆和快照
+## 常用 KVM命令
+
+```bash
+virsh list                          # 查看已开启的虚拟机
+```
+```bash
+virsh list --all                    # 查看所有虚拟机
+```
+```bash
+virsh net-list                      # 查看已开启的虚拟网络
+```
+```bash
+virsh net-list --all                # 查看所有虚拟网络
+```
+```bash
+virsh net-define default.xml        # 定义kvm网络
+```
+```bash
+virsh net-undefine default          # 删除kvm网络
+```
+```bash
+virsh net-start default             # 启动kvm网络
+```
+```bash
+virsh net-autostart default         # 自启动kvm网络
+```
+```bash
+virsh dumpxml vm-name               # 查看kvm虚拟机配置文件
+```
+```bash
+virsh start vm-name                 # 启动kvm虚拟机
+```
+```bash
+virsh shutdown vm-name              # 关闭kvm虚拟机（正常关机）
+```
+```bash
+virsh destroy vm-name               # 强制关闭虚拟机（非正常关机，相当于直接拔掉电源）
+```
+```bash
+virsh undefine vm-name              # 移除定义kvm虚拟机（只会删除配置文件，不会删除磁盘文件）
+```
+```bash
+virsh define file-name.xml          # 根据xml配置文件定义虚拟机
+```
+```bash
+virsh suspend vm-name               # 挂起虚拟机
+```
+```bash
+virsh resumed vm-name               # 恢复被挂起的虚拟机
+```
+```bash
+virsh autostart vm-name             # 开机自启动kvm虚拟机
+```
+```bash
+virsh console vm-name               # 使用console控制台连接虚拟机，键入 Ctrl+5 退出
+```
+```bash
+virsh dumpxml vm-name > ~/vm.xml    #导出虚拟机的配置文件 
+```
+```bash
+virsh setvcpus vm-name --maximum 4 --config   # 更改CPU
+```
+```bash
+virsh setmaxmem vm-name 1024 --config         # 更改内存
+```
+```bash
+virsh dominfo vm-name                         # 查看信息
+```
 
 
 
-克隆虚拟机
+## 虚拟机克隆和快照
+
+
+
+### 创建克隆
 
 ```bash
 virt-clone -o CentOS7.9_01 -n test1 -f /kvm/store/test1.qcow2
@@ -485,7 +503,7 @@ virt-clone 参数
 
 
 
-创建快照
+### 创建快照
 
 ```bash
 virsh snapshot-create test1
@@ -540,9 +558,9 @@ Name         Creation Time       State
 
 
 
-## 报错随笔
+## Error 随笔
 
-启动虚拟机时报错
+添加 ovs-br 后启动虚拟机时报错
 
 ```bash
 virsh start --domain test2
@@ -566,9 +584,10 @@ virsh edit test1    #编辑虚拟机配置文件，在<interface>加入<virtualp
 </interface>
 ```
 
-
-
-[^1 ]: 为了方便管理KVM网络，删除自带的默认网络，默认的网络模式为NAT 
+---
 
 
 
+[^1]: KVM 是基于 x86 虚拟化扩展(Intel VT 或者 AMD-V) 技术的虚拟机软件，所以查看 CPU 是否支持 VT 技术，就可以判断是否支持KVM。有返回结果，如果结果中有vmx（Intel）或svm(AMD)字样，就说明CPU的支持的。
+[^2]:为了方便管理KVM网络，删除自带的默认网络，默认的网络模式为NAT模式 
+[^3]:  如果是中文的话某些版本可能会报错或乱码。在CentOS 7 中修改 /etc/locale.conf

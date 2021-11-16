@@ -1,14 +1,12 @@
 ---
-title: "Linux系统排查常用命令"
+title: "Linux常用排查命令"
 date: 2021-11-16T11:01:07+08:00
 draft: true
 ---
 
 
 
-## 常用排查命令
-
-### ps
+## ps
 
 ps命令：可以查看进程的瞬间信息。
 
@@ -60,7 +58,7 @@ ls /proc | sort -n | uniq > 2
 
 
 
-### pstree
+## pstree
 
 查看进程树是否所有异常进程存在一个父进程、判断进程的父子关系
 
@@ -70,7 +68,7 @@ pstree -p
 
 
 
-### last
+## last
 
 查看近期用户登陆情况
 
@@ -78,7 +76,7 @@ pstree -p
 last -n 5                  # -n 5 表示输出5条
 ```
 
-### history
+## history
 
 查看历史命令
 
@@ -88,7 +86,7 @@ history 5                  # 5 表示输出最近使用的5条命令
 
 
 
-### awk
+## awk
 
 查看空口令账号awk[^2]
 
@@ -118,7 +116,7 @@ grep -v -E "^#" /etc/passwd | awk -F: '$3==0{print $1}'
 -E    --扩展正则表达式模式是一个扩展正则表达式
 ```
 
-### netstat
+## netstat
 
 查看服务使用的端口号
 
@@ -146,7 +144,7 @@ netstat -utpln
 
 
 
-### lsof
+## lsof
 
 查看谁在使用某个端口
 
@@ -190,7 +188,7 @@ lsof -i tcp
 
 
 
-### ls
+## ls
 
 ls 命令用来显示目标列表，不同类型的文件颜色也不同
 
@@ -214,7 +212,7 @@ ls -la
 
 
 
-### whereis
+## whereis
 
 查看文件的路径
 
@@ -226,7 +224,7 @@ hostname: /usr/bin/hostname /etc/hostname ……
 
 
 
-### find
+## find
 
 find 命令用来在指定目录下查找文件。
 
