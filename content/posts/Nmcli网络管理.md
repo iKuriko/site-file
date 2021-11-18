@@ -78,7 +78,7 @@ nmcli con modify ens34 ipv4.addresses 192.168.1.1/24
 nmcli con modify ens34 +ipv4.addresses 192.168.2.1/24
 ```
 
-删除IPv4地址
+**删除IPv4地址**
 
 ```bash
 nmcli con modify ens34 -ipv4.addresses 192.168.2.1/24
@@ -102,6 +102,12 @@ nmcli connection modify ens33 +ipv4.dns 8.8.8.8 备用DNS
 nmcli connection modify ens33 +ipv4.routes "192.168.2.0/24 192.168.1.233"
 ```
 
+**开机自启端口**
+
+```bash
+nmcli connection modify eno2 autoconnect yes|no
+```
+
 
 
 ### 控制网络连接
@@ -112,7 +118,7 @@ nmcli connection modify ens33 +ipv4.routes "192.168.2.0/24 192.168.1.233"
 nmcli connection up ens33
 ```
 
-关闭设备
+**关闭设备**
 
 ```bash
 nmcli connection down ens33
