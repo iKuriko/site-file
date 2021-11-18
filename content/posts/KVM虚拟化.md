@@ -400,72 +400,27 @@ ls /etc/libvirt/qemu/
 
 ```bash
 virsh list                          # 查看已开启的虚拟机
-```
-```bash
 virsh list --all                    # 查看所有虚拟机
-```
-```bash
 virsh net-list                      # 查看已开启的虚拟网络
-```
-```bash
 virsh net-list --all                # 查看所有虚拟网络
-```
-```bash
 virsh net-define default.xml        # 定义kvm网络
-```
-```bash
 virsh net-undefine default          # 删除kvm网络
-```
-```bash
 virsh net-start default             # 启动kvm网络
-```
-```bash
 virsh net-autostart default         # 自启动kvm网络
-```
-```bash
 virsh domiflist Centos              # 查看虚机内的网卡
-```
-
-```bash
 virsh dumpxml vm-name               # 查看kvm虚拟机配置文件
-```
-```bash
 virsh start vm-name                 # 启动kvm虚拟机
-```
-```bash
 virsh shutdown vm-name              # 关闭kvm虚拟机（正常关机）
-```
-```bash
 virsh destroy vm-name               # 强制关闭虚拟机（非正常关机，相当于直接拔掉电源）
-```
-```bash
 virsh undefine vm-name              # 移除定义kvm虚拟机（只会删除配置文件，不会删除磁盘文件）
-```
-```bash
 virsh define file-name.xml          # 根据xml配置文件定义虚拟机
-```
-```bash
 virsh suspend vm-name               # 挂起虚拟机
-```
-```bash
 virsh resumed vm-name               # 恢复被挂起的虚拟机
-```
-```bash
 virsh autostart vm-name             # 开机自启动kvm虚拟机
-```
-```bash
 virsh console vm-name               # 使用console控制台连接虚拟机，键入 Ctrl+5 退出
-```
-```bash
 virsh dumpxml vm-name > ~/vm.xml    #导出虚拟机的配置文件 
-```
-```bash
 virsh setvcpus vm-name --maximum 4 --config   # 更改CPU
-```
-```bash
 virsh setmaxmem vm-name 1024 --config         # 更改内存
-```
-```bash
 virsh dominfo vm-name                         # 查看信息
 ```
 
