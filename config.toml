@@ -965,7 +965,7 @@ uglyURLs = false
     # 页脚
     fontFamilyFooter =""
     # 主体
-    fontFamilyBody = "'Nunito'"
+    fontFamilyBody = "Nunito"
 
     # 网络字体链接
     fontsLink = "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
@@ -978,7 +978,7 @@ uglyURLs = false
     ######################################
     ## 字号（单位：px）
 
-    fontSize = 18
+    fontSize = 16
 
     ######################################
     ## 制表符的宽度
@@ -1339,7 +1339,7 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启
-    enableForceHTTPS = true
+    enableForceHTTPS = false
     # 说明：使用 JavaScript 来实现跳转。如果你
     #      的服务器不支持强制 HTTPS 跳转，则可
     #      开启此选项。

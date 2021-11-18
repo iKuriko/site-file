@@ -7,7 +7,7 @@ description:
 
 
 
-在CentoOS上安装sqlserver，需要先下载微软官方提供的在线yum源，再安装mssql-server软件包，再根据需要安装sqlserver的命令行工具或远程客户端进行连接  
+在CentoOS上安装sqlserver，需要先下载微软官方提供的在线yum源，再安装mssql-server软件包，再根据需要安装sqlserver的命令行工具或远程客户端进行连接
 
 >OS必须条件  
 >Memory：3.25 GB  
