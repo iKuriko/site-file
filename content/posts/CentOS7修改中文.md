@@ -6,12 +6,10 @@ draft: true
 
 安装中文语言包
 
-```bash
-yum install kde-l10n-Chinese          # CentOS 7 安装
-```
+
 
 ```bash
-yum install langpacks-zh_CN.noarch    # CentOS 8 安装
+yum install kde-l10n-Chinese #CentOS7 安装
 ```
 
 ```bash
@@ -42,8 +40,6 @@ LANG=zh_CN.utf8
 ```
 source /etc/locale.conf
 ```
-
-
 
 也可以直接设置系统语言
 
