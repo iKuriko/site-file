@@ -18,7 +18,7 @@ This is ikuriko's lazy blog
 
 
 
-所有其他的页面：
+所拥有的其他页面：
 
 https://blog.51cto.com/kuriko
 
