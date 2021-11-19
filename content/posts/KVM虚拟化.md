@@ -178,7 +178,7 @@ TYPE=Bridge
 NETMASK=255.255.255.0
 ```
 
-```
+```bash
 ip link set dev natbr0 up
 ```
 
@@ -222,7 +222,7 @@ TYPE=Bridge
 NETMASK=255.255.255.0
 ```
 
-```
+```bash
 ip link set dev br1 up
 ```
 
@@ -260,7 +260,7 @@ ovs-vsctl add-br ovs-br1    #创建ovs网桥
 
 新建网络定义 xml 文件
 
-```
+```bash
 vim /tmp/ovs-br1.xml
 ```
 
