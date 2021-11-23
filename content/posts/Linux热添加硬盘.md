@@ -1,5 +1,5 @@
 ---
-title: "Linux热添加硬盘"
+title: "Linux 热添加硬盘"
 date: 2021-11-01T17:41:41+08:00
 draft: true
 ---

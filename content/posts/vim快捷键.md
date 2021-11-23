@@ -1,5 +1,5 @@
 ---
-title: "Vim快捷键"
+title: "Vim 快捷键"
 date: 2021-09-09T16:56:06+08:00
 draft: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Hugo+GithubPages个人站点搭建"
+title: "Hugo+GithubPages 个人站点搭建"
 date: 2021-09-07T14:20:48+08:00
 draft: true
 ---

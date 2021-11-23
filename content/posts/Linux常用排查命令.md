@@ -1,5 +1,5 @@
 ---
-title: "Linux常用排查命令"
+title: "Linux 常用排查命令"
 date: 2021-11-16T11:01:07+08:00
 draft: true
 ---
