@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-Welcome
+Welcome ikuriko.github.io
 
 
 
@@ -26,13 +26,13 @@ This is ikuriko's lazy blog
 
 常用的软件：
 
-OS：Windows 10、CentOS
+OS：Windows 10、CentOS Linux
 
 Browser：Chrome、Firefox
 
 Editor ：Typora、Atom、Sublime
 
-Terminal：Xshell、MobaXterm、CRT
+Terminal：Xshell、MobaXterm、SecureCRT
 
 Python IDE：PyCharm
 
@@ -44,7 +44,7 @@ CAD：CAXA CAD、Auto CAD
 
 
 
-所拥有的其他页面：
+所拥有的其他页面（已暂停更新）：
 
 https://blog.51cto.com/kuriko
 

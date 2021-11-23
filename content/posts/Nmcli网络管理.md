@@ -1,5 +1,5 @@
 ---
-title: "Nmcli"
+title: "Nmcli 网络管理"
 date: 2021-11-02T14:37:25+08:00
 draft: true
 ---
@@ -164,7 +164,7 @@ nmcli connection up Bridge
 **配置gretap**
 
 ```bash
-nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 172.16.100.1 remote 172.16.100.100 master br0
+nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 172.16.100.1 remote 172.16.100.100 master br0 ipv4.method disabled ipv6.method disabled
 ```
 
 ---
@@ -195,12 +195,18 @@ master：隧道加入的网桥（按需添加）
 
 autoconnect：自动连接  
 
+ipv4.method：IPv4 配置方法
+
+ipv6.method：IPv6 配置方法
+
+
+
 ---
 
 配置网卡ipv4地址手动，ipv6地址禁用
 
 ```bash
-nmcli connection modify gretap01 ipv4.method manual ipv6.method disable
+nmcli connection modify gretap01 ipv4.method manual ipv6.method disabled
 ```
 
 启用设备，生效配置

@@ -628,7 +628,7 @@ TFTP，不需要客户端的权限认证，减少了带宽和系统的消耗。�
    
 
 ```bash
-dnf install tftp-server tftp xinted
+dnf install tftp-server tftp xinetd
 ```
 
  
