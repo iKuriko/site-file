@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-Welcome ikuriko.github.io
+Welcome to ikuriko.github.io  
 
 
 
@@ -44,7 +44,7 @@ CAD：CAXA CAD、Auto CAD
 
 
 
-所拥有的其他页面（已暂停更新）：
+所拥有的其他页面（暂不更新的）：
 
 https://blog.51cto.com/kuriko
 

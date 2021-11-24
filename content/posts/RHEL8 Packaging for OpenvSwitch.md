@@ -190,7 +190,7 @@ systemctl enable openvswitch
 
 参考的文献：
 
-Ovs：https://docs.openvswitch.org/en/latest/intro/install/fedora/?highlight=build%20openvswitch
+[https://docs.openvswitch.org/en/latest/intro/install/fedora/?highlight=build%20openvswitch](https://docs.openvswitch.org/en/latest/intro/install/fedora/?highlight=build%20openvswitch)
 
 
 
