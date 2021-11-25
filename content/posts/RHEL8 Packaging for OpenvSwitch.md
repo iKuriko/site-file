@@ -154,11 +154,41 @@ openvswitch-2.16.1-1.el8.x86_64.rpm                  openvswitch-devel-2.16.1-1.
 openvswitch-debuginfo-2.16.1-1.el8.x86_64.rpm        openvswitch-ipsec-2.16.1-1.el8.x86_64.rpm
 ```
 
+各个RPM包的作用
+
+```bash
+network-scripts-openvswitch-2.16.1-1.el8.x86_64
+# 网络脚本，开放 vSwitch 传统网络服务支持，这提供了用于传统网络服务的 ifup 和 ifdown 脚本。
+
+openvswitch-2.16.1-1.el8.x86_64
+# ovs 软件包本体，打开 vSwitch 守护进程/数据库/实用程序，Open vSwitch 提供标准的网络桥接功能并支持 OpenFlow 协议，以实现对流量的远程逐流控制。
+
+openvswitch-debuginfo-2.16.1-1.el8.x86_64
+# ovs 调试信息，这个包提供了包 openvswitch 的调试信息。在开发使用此包的应用程序或调试此包时，调试信息很有用。
+
+openvswitch-debugsource-2.16.1-1.el8.x86_64
+# ovs 调试源，此包为包 openvswitch 提供调试源。在开发使用此包的应用程序或调试此包时，调试源非常有用。
+
+openvswitch-devel-2.16.1-1.el8.x86_64
+# ovs 开发环境包，Open vSwitch OpenFlow 开发包（库、头文件），这提供了构建外部应用程序所需的静态库、libopenswitch.a 和 openvswitch 头文件。
+
+openvswitch-ipsec-2.16.1-1.el8.x86_64
+# ovs 对 vSwitch IPsec 隧道的支持，该软件包为 OVS 隧道提供 IPsec 隧道支持。
+
+openvswitch-kmod-2.16.1-1.el8.x86_64
+# ovs 的内核模块，这个包内含有 ovs 内核模块。
+```
+
 打包构建完成的RPM软件包
 
 ```bash
 tar -zcvf openvswitch-2.16.1-centos8.tar.gz /usr/local/openvswitch/rpm/rpmbuild/RPMS/x86_64/
+
+ll -h
+-rw-r--r--. 1 root root 9.6M 11月 23 16:11 openvswitch-2.16.1-centos8.tar.gz
 ```
+
+
 
 
 
@@ -186,11 +216,15 @@ systemctl start openvswitch
 systemctl enable openvswitch
 ```
 
+---
 
 
-参考的文献：
 
-[https://docs.openvswitch.org/en/latest/intro/install/fedora/?highlight=build%20openvswitch](https://docs.openvswitch.org/en/latest/intro/install/fedora/?highlight=build%20openvswitch)
+References & Resources
+
+[Fedora, RHEL 7.x Packaging for Open vSwitch](https://docs.openvswitch.org/en/latest/intro/install/fedora/?highlight=build%20openvswitch)
+
+[Information for build openvswitch-2.12.0-1.1.el8](https://cbs.centos.org/koji/buildinfo?buildID=30269)
 
 
 

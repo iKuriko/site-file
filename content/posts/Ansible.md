@@ -1300,7 +1300,7 @@ PLAY RECAP *********************************************************************
 - Ansible服务在执行剧本文件时会进行判断：如果该文件或该设备已经被创建过，或是某个动作（play）已经被执行过，则绝对不会再重复执行；而使用Shell脚本有可能导致设备被重复格式化，导致数据丢失。
 
 
- 
+
 
 通过之前学习过的逻辑卷的知识，我们应该让剧本文件依次创建物理卷（PV）、卷组（VG）及逻辑卷（LV）。需要先使用lvg模块让设备支持逻辑卷技术，然后创建一个名为new的卷组。lvg模块的帮助信息如下：
 
@@ -1593,7 +1593,7 @@ inventory_hostname是Ansible服务中的魔法变量，这意味着无法使用s
 - 若主机在test分组中，则修改/etc/issue文件内容为Test；
 
 
- 
+
 
 根据之前所提及的Ansible常用模块名称及作用，可以看到**copy模块的主要作用是新建、修改及复制文件**，更符合当前的需要，此时便派上了用场。先查询copy模块的帮助信息：
 
@@ -2000,6 +2000,6 @@ pw_production: Imaprod
 
 ---
 
-参考文章：
+References & Resources：
 
-使用Ansible服务实现自动化运维：https://www.linuxprobe.com/basic-learning-16.html
+[www.linuxprobe.com：使用Ansible服务实现自动化运维](https://www.linuxprobe.com/basic-learning-16.html)
