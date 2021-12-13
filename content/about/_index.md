@@ -2,31 +2,37 @@
 title: "About"
 ---
 
-Welcome to ikuriko.github.io  
+Welcome to Kuriko's blog  
 
 
 
-This is ikuriko's lazy blog     
+记录内容：  
+
+主要记录个人学习以及没什么营养的闲话
 
 
 
-基于 Hugo + Github Pages 搭建，不定时更新    
+暂用域名：  
+
+[kuriko.xyz](https://www.kuriko.xyz)、[ikuriko.github.io](https://ikuriko.github.io)
 
 
 
-主要记录个人学习以及没什么营养的闲话    
+站点说明：  
 
+基于 Hugo + Github Pages 搭建，不定时更新  
 
+主题使用 MemE 极简风  
 
-站点未发布到搜索引擎，由于没什么访问，为了页面简洁，关闭评论   
+暂未加入搜索引擎，由于没什么访问，为了页面简洁，关闭评论  
 
 
 
   
 
-常用的软件：
+个人常用软件：  
 
-OS：Windows 10、CentOS Linux
+OS：Windows 10、RHEL Linux、Arch Linux
 
 Browser：Chrome、Firefox
 
@@ -38,13 +44,13 @@ Python IDE：PyCharm
 
 Vm：VMWare Workstation、Virtual Box
 
-Note：Onenote for windows 10
+Note：Onenote、YuQue
 
 CAD：CAXA CAD、Auto CAD
 
 
 
-所拥有的其他页面（暂不更新的）：
+所拥有的其他页面（暂不更新）：
 
 https://blog.51cto.com/kuriko
 
