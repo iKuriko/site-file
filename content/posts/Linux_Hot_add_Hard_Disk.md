@@ -72,8 +72,9 @@ Host: scsi2 Channel: 00 Id: 01 Lun: 00
  Type:  Direct-Access          ANSI SCSI revision: 02
 ```
 
-~~\#或者使用rpm包sg3_utils 中的rescan-scsi-bus.sh脚本重新扫描~~
+未验证的方法
+
+~~\#使用rpm包sg3_utils 中的rescan-scsi-bus.sh脚本重新扫描~~
 
 ~~\# /usr/bin/rescan-scsi-bus.sh~~
 
-~~我没试过~~
