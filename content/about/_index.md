@@ -6,7 +6,7 @@ Welcome to Kuriko's blog
 
 
 
-✏记录内容：  
+✍️的记录内容：  
 
 主要记录个人学习以及没什么营养的闲话
 
@@ -18,7 +18,7 @@ Welcome to Kuriko's blog
 
 
 
-Ⓜ站点说明：  
+📃站点说明：  
 
 基于 Hugo + Github Pages 搭建，不定时更新  
 
@@ -28,7 +28,7 @@ Welcome to Kuriko's blog
 
 
 
-🛠个人常用软件：  
+🔧个人常用软件：  
 
 OS：Windows 10、RHEL Linux、Arch Linux
 
