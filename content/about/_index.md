@@ -6,19 +6,19 @@ Welcome to Kuriko's blog
 
 
 
-记录内容：  
+✏记录内容：  
 
 主要记录个人学习以及没什么营养的闲话
 
 
 
-暂用域名：  
+🌐暂用域名：  
 
 [kuriko.xyz](https://www.kuriko.xyz)、[ikuriko.github.io](https://ikuriko.github.io)
 
 
 
-站点说明：  
+Ⓜ站点说明：  
 
 基于 Hugo + Github Pages 搭建，不定时更新  
 
@@ -28,9 +28,7 @@ Welcome to Kuriko's blog
 
 
 
-  
-
-个人常用软件：  
+🛠个人常用软件：  
 
 OS：Windows 10、RHEL Linux、Arch Linux
 
@@ -50,7 +48,7 @@ CAD：CAXA CAD、Auto CAD
 
 
 
-所拥有的其他页面（暂不更新）：
+📖所拥有的其他页面（暂不更新）：
 
 https://blog.51cto.com/kuriko
 
