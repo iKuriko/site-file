@@ -338,7 +338,7 @@ uglyURLs = false
     # 诗句，支持 Markdown
     #homePoetry = ["大丘丘病了","二丘丘瞧","三丘丘采药","四丘丘嗷~","五丘丘死了","六丘丘抬","七丘丘挖坑","八丘丘埋~"]
     #homePoetry = ["ya~~~hu~","太阳出来我晒太阳~","月亮出来我晒月亮咯~"]
-    homePoetry = ["业精于勤；","荒于嬉。","行成于思；","毁于随。","","韩愈《进学解》"]
+    homePoetry = ["业精于勤；","荒于嬉。","行成于思；","毁于随。","---","韩愈《进学解》"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -968,6 +968,7 @@ uglyURLs = false
     fontFamilyBody = "Nunito"
 
     # 网络字体链接
+    #fontsLink = "https://fonts.googleapis.com/css2?family=300;400:wght@300;400&display=swap"
     fontsLink = "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
@@ -1075,7 +1076,7 @@ uglyURLs = false
     # 文章更新徽章
 
     # 是否开启
-    enablePostUpdatedBadge = true
+    enablePostUpdatedBadge = false
 
     # 是否显示（全局设置）
     displayUpdatedBadge = true
