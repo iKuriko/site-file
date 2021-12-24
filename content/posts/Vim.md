@@ -1,5 +1,5 @@
 ---
-title: "Vim 常用命令"
+title: "vim 常用命令"
 date: 2021-09-09T16:56:06+08:00
 draft: true
 ---

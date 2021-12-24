@@ -1,18 +1,16 @@
 ---
-title: "Nmcli 网络管理"
+title: "nmcli 命令使用"
 date: 2021-11-02T14:37:25+08:00
 draft: true
 ---
 
 
 
-## nmcli 常用命令
+## 常用命令
 
+### 查看
 
-
-### 查看网络连接
-
-**列出所有网络设备**
+列出所有网络设备
 
 ```bash
 nmcli connection show
@@ -36,13 +34,11 @@ nmcli connection show ens33
 nmcli device status
 ```
 
+### 添加
 
+新建网络连接
 
-### 添加网络连接
-
-**新建网络连接**
-
-```
+```bash
 nmcli connection add type ethernet con-name ens33 ifname ens33
 ```
 
@@ -58,15 +54,15 @@ nmcli connection delete ens33
 nmcli connection reload
 ```
 
+### 修改
 
+修改IPv4地址的获取方式为手动
 
+```bash
+nmcli connection modify ens34 ipv4.method manual
+```
 
-
-
-
-### 修改网络连接
-
-**添加IPv4地址**
+添加第一个IPv4地址
 
 ```bash
 nmcli con modify ens34 ipv4.addresses 192.168.1.1/24
@@ -78,47 +74,45 @@ nmcli con modify ens34 ipv4.addresses 192.168.1.1/24
 nmcli con modify ens34 +ipv4.addresses 192.168.2.1/24
 ```
 
-**删除IPv4地址**
+删除IPv4地址
 
 ```bash
 nmcli con modify ens34 -ipv4.addresses 192.168.2.1/24
 ```
 
-添加IP地址，网关和DNS，IP获取方式设置为手动
+添加IP地址，网关和DNS
 
 ```bash
-nmcli connection modify ens33 ipv4.method manual ipv4.addresses 192.168.0.1/24 ipv4.gateway 192.168.0.254 ipv4.dns 8.8.8.8
+nmcli connection modify ens34 ipv4.gateway 192.168.0.254 ipv4.dns 8.8.8.8
 ```
 
-添加第二个DNS
+添加第二个DNS(备用DNS)
 
 ```bash
-nmcli connection modify ens33 +ipv4.dns 8.8.8.8 备用DNS
+nmcli connection modify ens34 +ipv4.dns 8.8.8.8
 ```
 
-**添加静态路由**
+添加静态路由
 
 ```bash
-nmcli connection modify ens33 +ipv4.routes "192.168.2.0/24 192.168.1.233"
+nmcli connection modify ens34 +ipv4.routes "192.168.2.0/24 192.168.1.233"
 ```
 
-**开机自启端口**
+设置端口自动连接
 
 ```bash
-nmcli connection modify eno2 autoconnect yes|no
+nmcli connection modify ens34 autoconnect yes
 ```
 
+### 控制
 
-
-### 控制网络连接
-
-**启用设备**
+启用网络设备
 
 ```bash
 nmcli connection up ens33
 ```
 
-**关闭设备**
+关闭网络设备
 
 ```bash
 nmcli connection down ens33
@@ -137,39 +131,25 @@ nmcli device disconnec ens33
 nmcli device connect ens33
 ```
 
+## 创建虚拟设备
 
+### Linux-br
 
-
-
-### 添加虚拟设备
-
-**新建网桥**
+创建名为 Brdige 的 Linux 网桥
 
 ```bash
-nmcli connection add type bridge ifname Bridge con-name Bridge
+nmcli connection add type bridge ifname Bridge con-name Bridge ipv4.method disable ipv6.method disable
 ```
 
-配置网桥ipv4地址禁用，ipv6地址禁用
+### gretap
+
+创建名为 gretap01 的 gretap 二层隧道，加入 Brdige 网桥
 
 ```bash
-nmcli connection modify Bridge ipv4.method disable ipv6.method disable
+nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 192.168.2.164 remote 192.168.2.91 ipv4.method disabled ipv6.method disabled master Bridge
 ```
 
-启用设备，生效配置
-
-```bash
-nmcli connection up Bridge
-```
-
-**配置gretap**
-
-```bash
-nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 172.16.100.1 remote 172.16.100.100 master br0 ipv4.method disabled ipv6.method disabled
-```
-
----
-
-参数详解：
+nmcli 参数详解：
 
 add：新建连接
 
@@ -191,62 +171,46 @@ local：本地的IP地址
 
 remote：远程的IP地址
 
-master：隧道加入的网桥（按需添加）
-
 autoconnect：自动连接  
 
 ipv4.method：IPv4 配置方法
 
 ipv6.method：IPv6 配置方法
 
+master：隧道加入的网桥（按需添加）
 
+### GRE
 
----
-
-配置网卡ipv4地址手动，ipv6地址禁用
-
-```bash
-nmcli connection modify gretap01 ipv4.method manual ipv6.method disabled
-```
-
-启用设备，生效配置
+创建名为 gre01 的 GRE 三层隧道
 
 ```bash
-nmcli connection up gretap01
+nmcli connection add type ip-tunnel mode gre con-name gre01 ifname gre01 remote 192.168.2.91 local 192.168.2.164 ipv4.addresses 172.233.1.2/24 ip-tunnel.input-key 1 ip-tunnel.output-key 1 ip-tunnel.ttl 255 ipv4.method manual ipv6.method disable
 ```
 
+### vlan
 
-
-**配置GRE**
-
-```
-nmcli connection add type ip-tunnel mode gre con-name gre01 ifname gre01 remote 172.16.200.200 local 172.16.100.1 ipv4.addresses 192.168.0.1/30
-```
-
-配置网卡ipv4地址手动，ipv6地址禁用
-
-```bash
-nmcli connection modify gre01 ipv4.method manual ipv6.method disable
-```
-
-启用设备，生效配置
-
-```bash
-nmcli connection up gre01
-```
-
-
-
-**配置vlan子接口**
+创建基于 ens33 网卡名为 ens33.1 的 vlan 子接口，加入 Bridge 网桥
 
 ```bash
 nmcli connection add type vlan con-name ens33.1 ifname ens33.1 id 1 master Bridge dev ens33
 ```
 
-启用设备，生效配置
+### vxlan
+
+**vxlan创建命令（三层）**
+
+创建名为 vxlan1 的三层 vxlan
 
 ```bash
-nmcli connection up ens33.1
+nmcli connection add type vxlan id 100 remote 192.168.2.91 ipv4.addresses 172.233.233.1/24 ipv4.method manual ipv6.method disabled ifname vxlan1 connection.id vxlan1 vxlan.parent ens32
+```
+
+**vxlan创建命令（二层）**
+
+创建名为 vxlan10 的二层 vxlan ，加入 Brdige 网桥
+
+```bash
+nmcli connection add type vxlan id 10 remote 192.168.2.91 ipv4.method disabled ipv6.method disabled ifname vxlan10 connection.id vxlan10 vxlan.parent ens32 master Bridge
 ```
 
 
