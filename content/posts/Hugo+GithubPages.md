@@ -190,7 +190,9 @@ Success！
 
 https://ikuriko.github.io
 
-### **PS:Git 的基本使用**
+
+
+**PS:Git 的基本使用**
 
 查看当前仓库的状态
 
