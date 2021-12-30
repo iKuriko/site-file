@@ -892,7 +892,7 @@ uglyURLs = false
     enableImageHost = true
 
     # 图片外链地址
-    imageHostURL = "https://ikuriko.github.io"
+    imageHostURL = "https://ikuriko.github.io/"
 
     # 是否将 HTML 的头部元数据中的图片链接也替换为外链
     headAlso = false
