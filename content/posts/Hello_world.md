@@ -23,7 +23,7 @@ Center
 
 
 
-image
+Image
 
 
 
@@ -47,7 +47,7 @@ image
 
 
 
-form
+Form
 
 | 这是一个表格 |       |
 | :----------- | :---- |

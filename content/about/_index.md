@@ -2,6 +2,15 @@
 title: "About"
 ---
 
+
+
+
+
+
+![hello-world.jpg](/about.jpg)
+
+
+
 Welcome to Kuriko's blog  
 
 
