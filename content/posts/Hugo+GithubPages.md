@@ -33,7 +33,7 @@ hugo new site blog
 
 进入`blog`目录安装主题
 
-```
+```bash
 cd blog
 ```
 
