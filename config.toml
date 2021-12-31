@@ -244,7 +244,7 @@ uglyURLs = false
         weight = 1
         pre = "external"
     [[menu.socials]]
-        url = "mailto:ikuriko.qq.com"
+        url = "mailto:ikuriko@qq.com"
         name = "Mail"
         weight = 2
         pre = "external"
