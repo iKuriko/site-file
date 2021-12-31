@@ -7,7 +7,7 @@ title: "About"
 
 
 
-![hello-world.jpg](/about.jpg)
+![about.jpg](/images/about.jpg)
 
 
 
