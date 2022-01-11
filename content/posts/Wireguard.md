@@ -33,9 +33,11 @@ yum install kmod-wireguard wireguard-tools qrencode -y
 
 
 
-# 配置
+# 配置IPv4模式
 
-## 服务端配置（server）
+## 服务端配置（Server）
+
+**创建wireguard接口**
 
 生成server端公钥（publickey）和私钥（privatekey）（类似SSH）
 
@@ -55,17 +57,17 @@ ip link add wg0 type wireguard
 wg set wg0 listen-port 42333 private-key ./test_server.pri
 ```
 
-配置IP
+配置IP地址
 
 ```bash
-ifconfig wg0 198.18.233.1/24 up  |  ip addr add 198.18.233.1/24 dev wg0
+ip addr add 198.18.233.1/24 dev wg0
 ```
 
 
 
-### 添加peer
+**添加客户端**
 
-> WireGuard没有明确的服务端和客户端的定义，他们是对等的一对peer，这里为了方便理解，将另一台服务端命名为client1，终端设备命名为client2。（终端设备代指PC、手机等）
+> WireGuard没有明确的服务端和客户端的定义，他们是对等的一对peer，这里为了方便理解，模拟了一台服务器和一台PC机的账号创建。将服务器命名为client1，终端设备PC命名为client2。
 
 
 
@@ -101,7 +103,7 @@ wg set wg0 peer $(cat ./test_client2.pub) allowed-ips 198.18.233.3/32
 
 
 
-### 配置保存
+**保存配置**
 
 新建wg0配置文件
 
@@ -114,6 +116,10 @@ touch /etc/wireguard/wg0.conf
 ```bash
 wg-quick save wg0
 ```
+
+
+
+**启用接口**
 
 启动接口（有配置文件的接口才能使用）
 
@@ -137,13 +143,9 @@ systemctl enable wg-quick@wg0.service
 
 
 
-## 服务端配置（client1）
+## 客户端配置（Client1）
 
-创建wg0接口
-
-```bash
-ip link add wg0 type wireguard
-```
+创建wireguard接口
 
 配置client1的私钥、server的公钥、允许的IP、服务端的IP和端口号
 
@@ -151,9 +153,33 @@ ip link add wg0 type wireguard
 wg set wg0 private-key $(test_client1.pri) peer $(test_server.pub) persistent-keepalive 1 allowed-ips 0.0.0.0/0 endpoint server_ip:server_port
 ```
 
+创建wg0接口
+
+```bash
+ip link add wg0 type wireguard
+```
+
+配置IP地址
+
+```bash
+ip addr add 198.18.233.2/24 dev wg0
+```
+
+添加默认路由
+
+```bash
+ip ro add default via 198.18.233.1
+```
+
+SNAT策略（如有必要）
+
+```bash
+iptables -t nat -A POSTROUTING -o wg0 -j SNAT --to-source 198.18.233.2
+```
 
 
-## 终端设备配置（client2）
+
+## 终端设备配置（Client2）
 
 client2的配置文件
 
@@ -171,9 +197,111 @@ AllowedIPs = 198.18.233.0/24
 PersistentKeepalive = 1
 ```
 
-#server端，使用配置文件，生成配置二维码 
+#可以用配置文件生成二维码 
 
 ```bash
 qrencode -o test_client.png < test_client.conf
+```
+
+
+
+# 配置IPv6模式
+
+
+
+> Wireguard使用IPv6的配置与IPv4并无太大差异，这里只做简单演示
+
+
+
+## 服务端配置（Server）
+
+**创建wireguard接口**
+
+生成server端公钥（publickey）和私钥（privatekey）（类似SSH）
+
+```bash
+wg genkey | tee ./test_server.pri | wg pubkey > ./test_server.pub
+```
+
+创建wg1接口
+
+```bash
+ip link add wg1 type wireguard
+```
+
+启动接口设置监听的端口和私钥
+
+```bash
+wg set wg1 listen-port 42333 private-key ./test_server.pri
+```
+
+配置IP地址
+
+```bash
+ifconfig wg1 inet6 add fec0:1001:1001:1001:1001:1001:1234:0001/112
+```
+
+启用接口
+
+```bash
+ip link set wg1 up
+```
+
+**添加客户端**
+
+为client生成客户端的公钥和私钥
+
+```bash
+wg genkey | tee ./test_client3.pri | wg pubkey > ./test_client3.pub
+```
+
+查看客户端的公钥和私钥，之后配置需使用
+
+```bash
+cat ./test_client3.[pub/pri]
+```
+
+在Server端添加client3的peer公钥和允许的IP
+
+```bash
+wg set wg1 peer allowed-ips fec0:1001:1001:1001:1001:1001:1234:0002/128
+```
+
+## 客户端配置（Client3）
+
+创建wg1接口
+
+```bash
+ip link add wg1 type wireguard
+```
+
+配置client3的私钥、server的公钥、允许的IP、服务端的IP和端口号
+
+```bash
+wg set wg1 private-key $(test_client3.pri) peer $(test_server.pub) persistent-keepalive 1 allowed-ips 0:0:0:0:0:0:0:0/0 endpoint server_ip:server_port
+```
+
+配置IP地址
+
+```bash
+ifconfig wg1 inet6 add fec0:1001:1001:1001:1001:1001:1234:0002/112
+```
+
+启用wg1接口
+
+```bash
+ip link set wg1 up
+```
+
+添加默认路由
+
+```bash
+ip -6 ro add default via fec0:1001:1001:1001:1001:1001:1234:0001
+```
+
+SNAT策略（如有必要）
+
+```bash
+ip6tables -t nat -A POSTROUTING -o wg1 -j SNAT --to-source fec0:1001:1001:1001:1001:1001:1234:0002
 ```
 
