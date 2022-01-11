@@ -5,7 +5,7 @@ draft: true
 description: WireGuard 是一个简单、快速且安全的开源VPN软件 
 ---
 
-# 简介
+## 简介
 
 WireGuard 利用最新的加密技术，提供更快、更精简、更安全、易于部署、方便管理的通用VPN，可以在低端到高端设备上部署。
 
@@ -17,7 +17,7 @@ WireGuard 利用最新的加密技术，提供更快、更精简、更安全、�
 
 
 
-# 安装
+## 安装
 
 添加软件包仓库源
 
@@ -33,9 +33,9 @@ yum install kmod-wireguard wireguard-tools qrencode -y
 
 
 
-# 配置IPv4模式
+## IPv4模式
 
-## 服务端配置（Server）
+### 服务端配置（Server）
 
 **创建wireguard接口**
 
@@ -143,7 +143,7 @@ systemctl enable wg-quick@wg0.service
 
 
 
-## 客户端配置（Client1）
+### 客户端配置（Client1）
 
 创建wireguard接口
 
@@ -179,7 +179,7 @@ iptables -t nat -A POSTROUTING -o wg0 -j SNAT --to-source 198.18.233.2
 
 
 
-## 终端设备配置（Client2）
+### 终端设备配置（Client2）
 
 client2的配置文件
 
@@ -205,7 +205,7 @@ qrencode -o test_client.png < test_client.conf
 
 
 
-# 配置IPv6模式
+## IPv6模式
 
 
 
@@ -213,7 +213,7 @@ qrencode -o test_client.png < test_client.conf
 
 
 
-## 服务端配置（Server）
+### 服务端配置（Server）
 
 **创建wireguard接口**
 
@@ -267,7 +267,7 @@ cat ./test_client3.[pub/pri]
 wg set wg1 peer allowed-ips fec0:1001:1001:1001:1001:1001:1234:0002/128
 ```
 
-## 客户端配置（Client3）
+### 客户端配置（Client3）
 
 创建wg1接口
 
