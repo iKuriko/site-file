@@ -12,3 +12,5 @@ draft: true
 
 <p style="text-align:center;">红红的很烫的女孩子来了</p>
 
+<img src="/images/diluc.jpg" alt="" style="width:50%" />
+
