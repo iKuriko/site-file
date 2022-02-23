@@ -66,7 +66,7 @@ yum -y install qemu-kvm libvirt libvirt-daemon libvirt-daemon-driver-qemu libvir
 
 所需软件包详解
 
-```
+```bash
 qemu-kvm                      # KVM模块
 libvirt                       # 虚拟机管理工具包
 libvirt-daemon                
@@ -459,7 +459,7 @@ qemu-img 命令可以对kvm的磁盘镜像进行管理
 qemu-img convert -f raw -O qcow2 <raw格式磁盘镜像路径> <qcow2格式磁盘镜像路径>
 ```
 
-```
+```bash
 选项：
 -c：对输出的镜像文件进行压缩，但只有qcow2和qcow格式支持
 -f：指定源磁盘格式

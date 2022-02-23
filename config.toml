@@ -109,7 +109,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://ikuriko.github.io"
     # 推特
-    twitter = "akur1ko"
+    twitter = "callousmaster"
 
 # 相关文章
 [related]
