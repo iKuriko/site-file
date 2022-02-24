@@ -135,7 +135,7 @@ ip netns exec ns2 ip link set dev veth1 up
 
 
 
-### Linux bridge 和2个 veth pair
+### Linux bridge 和 2个 veth pair
 
 
 
