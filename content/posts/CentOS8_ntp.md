@@ -50,7 +50,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 安装Chronyd服务
 
 ```bash
-yum -y install chronyd
+yum -y install chrony
 ```
 
 添加需要同步的主机
