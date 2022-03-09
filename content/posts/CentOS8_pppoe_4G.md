@@ -2,7 +2,7 @@
 title: "CentOS8 pppoe 4G拨号"
 date: 2022-03-09T11:44:50+08:00
 draft: true
-description: CentOS8 使用Huawei ME906s 4G模块pppoe拨号上网
+description: 使用Huawei ME906s 4G模块pppoe拨号上网
 ---
 
 
@@ -93,7 +93,7 @@ connect '/usr/sbin/chat -s -v -f /etc/ppp/gprs-connect-chat'
 
  
 
-4.校验文本/etc/ppp/gprs-connect-chat的具体内容是如下：
+4.校验文本/etc/ppp/gprs-connect-chat的具体内容如下：
 
  
 
