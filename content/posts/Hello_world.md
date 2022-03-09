@@ -11,7 +11,7 @@ description: Test page
 
 
 
-Center 
+Fonts 
 
 <p style="text-align:center;color:;font-size:20px;font-family:arial">这是居中</p> 
 
@@ -19,6 +19,14 @@ Center
 
 ```md
 <p style="text-align:center;color:;font-size:20px;font-family:">这是居中</p> 
+```
+
+
+
+<p style="text-align:center;color:red;font-size:20px;">这是红色</p> 
+
+```
+<p style="text-align:center;color:red;font-size:20px;font-family:">这是红色</p> 
 ```
 
 
@@ -61,3 +69,4 @@ Form
 | 2            | tesT2 |
 | 3            | tesT3 |
 ```
+
