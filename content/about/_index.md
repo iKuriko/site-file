@@ -9,34 +9,37 @@ title: "About"
 
 ![about.jpg](/images/about.jpg)
 
+　　
 
+> Welcome to Kuriko's blog  
 
-Welcome to Kuriko's blog  
-
-
+　　
 
 ✍️记录内容：  
 
-- 主要记录个人学习，内容如有错误，还请指正
-- 没什么营养的闲话，扯闲篇而已了
+主要记录个人学习笔记（内容如有错误，还请指正）  
 
+没什么营养的闲话（扯闲篇而已了）  
 
+　　
 
 🌐暂用域名：  
 
-[kuriko.xyz](https://www.kuriko.xyz)、[ikuriko.github.io](https://ikuriko.github.io)
+[kuriko.xyz](https://www.kuriko.xyz)  
+[ikuriko.github.io](https://ikuriko.github.io)  
 
+　　
 
 
 📃站点说明：  
 
-基于 Hugo + Github Pages 搭建，不定时更新  
+基于 Hugo GitPages 搭建， 使用 MemE 极简风主题   
 
-主题使用 MemE 极简风  
+未加入搜索引擎，为了页面简洁，关闭评论  
 
-暂未加入搜索引擎，由于没什么访问，为了页面简洁，关闭评论  
+~~不定时诈尸更新~~  
 
-
+  　
 
 🔧个人常用软件：  
 
@@ -48,15 +51,15 @@ Editor ：Typora、Atom、Sublime
 
 Terminal：Xshell、MobaXterm、SecureCRT
 
-Python IDE：PyCharm
+IDE：PyCharm
 
-Vm：VMWare Workstation、Virtual Box
+Vm：VMware Workstation、Virtual Box
 
 Note：Onenote、YuQue
 
 CAD：CAXA CAD、Auto CAD
 
-
+  　
 
 📖所拥有的其他页面（暂不更新）：
 
