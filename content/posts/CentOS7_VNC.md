@@ -2,6 +2,9 @@
 title: "CentOS7 安装 VNC"
 date: 2021-11-03T17:38:40+08:00
 draft: true
+tags:
+  - Linux
+description: 
 ---
 
 

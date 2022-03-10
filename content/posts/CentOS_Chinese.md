@@ -2,6 +2,9 @@
 title: "CentOS 安装中文语言包"
 date: 2021-11-05T10:34:28+08:00
 draft: true
+tags:
+  - Linux
+description:
 ---
 
 安装中文语言包

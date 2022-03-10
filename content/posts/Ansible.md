@@ -2,6 +2,10 @@
 title: "Ansible"
 date: 2021-10-29T11:50:51+08:00
 draft: true
+tags:
+  - Linux
+  - Ansible
+description: 
 ---
 
 

@@ -2,6 +2,9 @@
 title: "tcpdump 常用命令"
 date: 2021-10-11T17:30:36+08:00
 draft: true
+tags:
+  - Linux
+description:
 ---
 
 <p style="text-align:left;color:red;font-size:20px;font-family:arial">Linux下抓包工具Tcpdump的常用方法</p>  

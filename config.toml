@@ -189,21 +189,20 @@ uglyURLs = false
 
 [menu]
     ## 菜单栏
-    # [[menu.main]]
-    #     url = "/"
-    #     name = "首页"
-    #     weight = 1
-    #     pre = "internal"
-    #     post = "home"
+#     [[menu.main]]
+#        url = "/"
+#        name = "首页"
+#        weight = 1
+#        pre = "internal"
     [[menu.main]]
         url = "/posts/"
-        name = "文章"
+        name = "Tech"
         weight = 1
         pre = "internal"
         post = "archive"
     [[menu.main]]
         url = "/life/"
-        name = "日常"
+        name = "Life"
         weight = 2
         pre = "internal"
         post = "archive"
@@ -214,15 +213,15 @@ uglyURLs = false
 #        pre = "internal"
 #        post = "archive"
 #        identifier = "archive"
-#    [[menu.main]]
-#        url = "/tags/"
-#        name = "标签"
-#        weight = 4
-#        pre = "internal"
-#        post = "tags"
+    [[menu.main]]
+        url = "/tags/"
+        name = "Tag"
+        weight = 4
+        pre = "internal"
+        post = "tags"
     [[menu.main]]
         url = "/about/"
-        name = "关于"
+        name = "About"
         weight = 5
         pre = "internal"
         post = "user-circle"

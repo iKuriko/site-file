@@ -2,6 +2,10 @@
 title: "KVM 虚拟化"
 date: 2021-11-10T16:36:54+08:00
 draft: true
+tags:
+  - Linux
+  - KVM
+description:
 ---
 
 ## 简介

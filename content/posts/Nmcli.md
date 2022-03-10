@@ -2,6 +2,10 @@
 title: "nmcli 命令使用"
 date: 2021-11-02T14:37:25+08:00
 draft: true
+tags:
+  - Linux
+  - NetworkManager
+description:
 ---
 
 

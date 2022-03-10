@@ -2,6 +2,10 @@
 title: "Network NameSpace"
 date: 2022-02-22T14:50:30+08:00
 draft: true
+tags:
+  - Linux
+  - Namespace
+description:
 ---
 
 ## NameSpace 简介
