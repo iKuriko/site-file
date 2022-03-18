@@ -5,6 +5,7 @@ draft: true
 tags:
   - Linux
   - CentOS
+  - FTP
 description:
 ---
 
