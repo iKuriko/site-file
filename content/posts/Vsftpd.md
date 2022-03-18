@@ -4,6 +4,7 @@ date: 2021-10-14T15:16:25+08:00
 draft: true
 tags:
   - Linux
+  - CentOS
 description:
 ---
 

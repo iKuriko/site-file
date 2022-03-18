@@ -4,6 +4,8 @@ date: 2021-11-23T16:25:50+08:00
 draft: true
 tags:
   - Linux
+  - CentOS
+  - OpenvSwitch
 description:
 ---
 

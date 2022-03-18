@@ -5,6 +5,7 @@ draft: true
 tags:
   - Linux
   - Ansible
+  - CentOS
 description: 
 ---
 

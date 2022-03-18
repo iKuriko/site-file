@@ -5,6 +5,7 @@ draft: true
 tags:
   - Linux
   - VPN
+  - CentOS
 description: WireGuard 是一个简单、快速且安全的开源VPN软件 
 ---
 
@@ -17,6 +18,8 @@ WireGuard 利用最新的加密技术，提供更快、更精简、更安全、�
 支持所有最新的加密技术，例如 Noise 协议框架、Curve25519、ChaCha20、Poly1305、BLAKE2、SipHash24、HKDF 和安全受信任结构。
 
 运行在内核空间，因此可以高速的提供安全的网络。
+
+这些是 WireGuard 越来越受欢迎的一些原因。Linux 创造者 Linus Torvalds 非常喜欢 WireGuard，以至于将其合并到 Linux Kernel 5.6 中以取代OpenVPN。
 
 
 

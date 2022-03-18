@@ -154,7 +154,7 @@ uglyURLs = false
 [outputs]
     page = ["HTML"]
     # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS","Algolia"]
+    home = ["HTML", "SectionsAtom", "SectionsRSS"]
     section = ["HTML"]
     taxonomy = ["HTML"]
     term = ["HTML"]
@@ -1384,7 +1384,7 @@ uglyURLs = false
     #      次将生成的 algolia.json 文件上传到
     #      Algolia
 
-    enableAlgoliaSearch = true
+    enableAlgoliaSearch = false
 
     algoliaAppId = "X6T48HHWDY"
     algoliaApiKey = "053d902a5fe40c9a8d5a92c68eaddcb9"
