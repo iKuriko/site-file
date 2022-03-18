@@ -3,8 +3,7 @@ title: "CentOS7 SQLServer2017"
 date: 2021-11-18T11:56:06+08:00
 draft: true
 tags:
-  - Linux
-  - CentOS
+  - CentOS Linux
 description: 
 ---
 

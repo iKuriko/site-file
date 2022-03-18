@@ -1,17 +1,14 @@
 ---
-title: "Linux 热添加硬盘"
+title: "CentOS 热添加硬盘"
 date: 2021-11-01T17:41:41+08:00
 draft: true
 tags:
-  - Linux
-  - CentOS
-description:
+  - CentOS Linux
+description: 安装了 CentOS Linux 发行版的服务器正在运行，并且无法进行关机操作时，下面的命令可以扫描到新插入的硬盘 
 
 ---
 
 
-
-安装了 Linux 发行版的服务器正在运行，并且无法进行关机操作时，以下命令可以扫描到新插入的硬盘 
 
 当前环境为VMware虚拟机，服务器真机经测试后同样适用  
 

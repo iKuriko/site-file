@@ -3,11 +3,10 @@ title: "Tcpdump 常用命令"
 date: 2021-10-11T17:30:36+08:00
 draft: true
 tags:
-  - Linux
-description:
+  - CentOS Linux
+  - Tcpdump
+description: Linux 下抓包工具 Tcpdump 的使用方法
 ---
-
-<p style="text-align:left;color:red;font-size:20px;font-family:arial">Linux下抓包工具Tcpdump的常用方法</p>  
 
 
 

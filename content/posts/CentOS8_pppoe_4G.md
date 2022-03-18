@@ -3,9 +3,9 @@ title: "CentOS8 PPPOE 4G"
 date: 2022-03-09T11:44:50+08:00
 draft: true
 tags:
-  - Linux
-  - CentOS
-description: 使用Huawei ME906s 4G模块pppoe拨号上网
+  - CentOS Linux
+  - PPPOE
+description: 使用Huawei ME906s 4G模块PPPOE拨号上网
 ---
 
 

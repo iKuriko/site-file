@@ -3,9 +3,9 @@ title: "Nmcli 命令使用"
 date: 2021-11-02T14:37:25+08:00
 draft: true
 tags:
-  - Linux
+  - CentOS Linux
   - NetworkManager
-description:
+description: Nmcli 由 网络管理器 NetworkManager 软件包提供，是新一代的网络管理工具
 ---
 
 

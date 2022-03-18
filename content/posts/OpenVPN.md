@@ -2,12 +2,24 @@
 title: "OpenVPN"
 date: 2022-03-18T11:27:46+08:00
 draft: true
-description: 在CentOS8.5上部署OVPN，使用账号密码实现客户端登录
 tags:
-    - Linux
-    - VPN
-    - CentOS
+  - CentOS Linux
+  - VPN
+  - OpenVPN
+description: 在 CentOS8 上部署 OVPN ，实现使用账号密码的客户端登录和代理上网
 ---
+
+
+
+OpenVPN 是一个基于 OpenSSL 库的应用层 VPN。~~和传统 VPN 相比，它的优点是简单易用~~（跟 WireG 比划比划？）。
+
+OpenVPN的服务器和客户端支持 TCP 和 UDP 两种连接方式
+
+
+
+OpenVPN服务器一般需要配置一个虚拟IP地址池和一个自用的静态虚拟IP地址（必须在同一个子网中），然后为每一个成功建立 SSL 连接的客户端动态分配一个虚拟IP地址池中未分配的地址。
+
+
 
 
 

@@ -3,10 +3,9 @@ title: "RHEL8 Packaging for OpenvSwitch"
 date: 2021-11-23T16:25:50+08:00
 draft: true
 tags:
-  - Linux
-  - CentOS
+  - CentOS Linux
   - OpenvSwitch
-description:
+description: 在 CentOS8 上构建 OpenvSwitch 软件包
 ---
 
 ## Preparation

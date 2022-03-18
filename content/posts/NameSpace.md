@@ -3,10 +3,10 @@ title: "Network NameSpace"
 date: 2022-02-22T14:50:30+08:00
 draft: true
 tags:
-  - Linux
+  - CentOS Linux
   - Namespace
 
-description:
+description: Namespace能够创建多个隔离的网络空间
 ---
 
 ## NameSpace 简介
