@@ -855,7 +855,7 @@ echo net.ipv4.ip_forward=1 >> /etc/sysctl.conf
 
  立即生效配置
 
-```
+```bash
 sysctl -p
 ```
 
