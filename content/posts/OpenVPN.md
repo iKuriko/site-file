@@ -39,7 +39,7 @@ cp -r /usr/share/easy-rsa/ /etc/openvpn/easy-rsa
 
 生成CA证书配置文件，复制easy-rsa配置文件到/etc/openvpn/easy-rsa/3.0.8目录下,并重命名为vars
 
-```
+```bash
 cp -r /usr/share/doc/easy-rsa/vars.example /etc/openvpn/easy-rsa/3.0.8/vars
 ```
 
@@ -806,7 +806,7 @@ resolv-retry infinite
 
 ### 配置账号密码登录
 
-```
+```bash
 vim /etc/openvpn/passwd
 ```
 
