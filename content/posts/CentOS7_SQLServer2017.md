@@ -4,14 +4,13 @@ date: 2021-11-18T11:56:06+08:00
 draft: true
 tags:
   - CentOS Linux
-description: 
+description: 在CentoOS上安装sqlserver，需要先下载微软官方提供的在线yum源，再安装mssql-server软件包，再根据需要安装sqlserver的命令行工具或远程客户端进行连接
 ---
 
 
 
-在CentoOS上安装sqlserver，需要先下载微软官方提供的在线yum源，再安装mssql-server软件包，再根据需要安装sqlserver的命令行工具或远程客户端进行连接
+OS必须条件  
 
->OS必须条件  
 >Memory：3.25 GB  
 >File System：XFS or EXT4 (other file systems, such as BTRFS, are unsupported)  
 >Disk space ：6 GB  

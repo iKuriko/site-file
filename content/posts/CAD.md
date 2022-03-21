@@ -4,12 +4,10 @@ date: 2021-09-23T15:57:29+08:00
 draft: true
 tags:
   - CAD
-description: 
+description: 记录绘制 2D 平面图常用的CAD快捷命令
 ---
 
 
-
-记录绘制 2D 平面图使用的常用CAD快捷命令
 
 <p style='color:red'>所有的命令通过键入命令行，按空格键来执行</p>
 

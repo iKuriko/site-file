@@ -9,9 +9,9 @@ tags:
   - MySQL
   - Tomcat
   - Python
-description: 
+description: 为 Javaweb 开发项目搭建基础环境，全部软件使用源码包手动安装
 ---
-为 Javaweb 开发项目搭建基础环境，全部使用源码包手动安装
+
 
 环境使用软件版本为：Centos7.9_2009 + jdk1.8 + mysql 5.7.34 + python3.6 + tomcat 8.5.69
 
