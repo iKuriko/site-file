@@ -337,8 +337,8 @@ uglyURLs = false
     # 诗句，支持 Markdown
     #homePoetry = ["大丘丘病了","二丘丘瞧","三丘丘采药","四丘丘嗷~","五丘丘死了","六丘丘抬","七丘丘挖坑","八丘丘埋~"]
     #homePoetry = ["ya~~~hu~","太阳出来我晒太阳~","月亮出来我晒月亮咯~"]
-    #homePoetry = ["业精于勤；","荒于嬉。","行成于思；","毁于随。","——","韩愈《进学解》"]
-    homePoetry = ["你总喜欢把事情拖到第二天","有一天","你会有很多事情要做","你的余生都不够用","——","The First Day of the Rest of Your Life"]
+    homePoetry = ["业精于勤；","荒于嬉","行成于思；","毁于随"]
+    #homePoetry = ["你总喜欢把事情拖到第二天","有一天","你会有很多事情要做","你的余生都不够用","——","The First Day of the Rest of Your Life"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 0.5
 
