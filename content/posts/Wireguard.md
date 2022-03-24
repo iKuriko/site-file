@@ -223,16 +223,14 @@ qrencode -o test_client.png < test_client.conf
 
 **创建wireguard接口**
 
+```bash
+ip link add wg1 type wireguard
+```
+
 生成server端公钥（publickey）和私钥（privatekey）（类似SSH）
 
 ```bash
 wg genkey | tee ./test_server.pri | wg pubkey > ./test_server.pub
-```
-
-创建wg1接口
-
-```bash
-ip link add wg1 type wireguard
 ```
 
 启动接口设置监听的端口和私钥

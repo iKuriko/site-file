@@ -6,7 +6,7 @@ tags:
   - CentOS Linux
   - Namespace
 
-description: Namespace能够创建多个隔离的网络空间
+description: Namespace是 Linux 内核中隔离资源的一种特性，是 Linux 实现网络虚拟化的重要功能，能够创建多个隔离的网络空间，各自拥有独自的网络栈信息
 ---
 
 ## NameSpace 简介
