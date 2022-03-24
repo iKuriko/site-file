@@ -477,6 +477,12 @@ if [ ! -r "${PASSFILE}" ]; then
 
 ```
 
+给予脚本执行权限
+
+```bash
+chmod +x checkpsw.sh 
+```
+
 
 
 新建用户账号密码记录文件，后续添加账号可直接添加
