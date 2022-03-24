@@ -153,22 +153,26 @@ systemctl enable wg-quick@wg0.service
 
 创建wireguard接口
 
+```bash
+ip link add wg0 type wireguard
+```
+
 配置client1的私钥、server的公钥、允许的IP、服务端的IP和端口号
 
 ```bash
-wg set wg0 private-key $(test_client1.pri) peer $(test_server.pub) persistent-keepalive 1 allowed-ips 0.0.0.0/0 endpoint server_ip:server_port
-```
-
-创建wg0接口
-
-```bash
-ip link add wg0 type wireguard
+wg set wg0 private-key ./test_client1.pri peer $(test_server.pub) persistent-keepalive 1 allowed-ips 0.0.0.0/0 endpoint server_ip:server_port
 ```
 
 配置IP地址
 
 ```bash
 ip addr add 198.18.233.2/24 dev wg0
+```
+
+启动wg0接口
+
+```bash
+ip link set wg0 up
 ```
 
 添加默认路由
@@ -223,14 +227,16 @@ qrencode -o test_client.png < test_client.conf
 
 **创建wireguard接口**
 
-```bash
-ip link add wg1 type wireguard
-```
-
 生成server端公钥（publickey）和私钥（privatekey）（类似SSH）
 
 ```bash
 wg genkey | tee ./test_server.pri | wg pubkey > ./test_server.pub
+```
+
+创建wg1接口
+
+```bash
+ip link add wg1 type wireguard
 ```
 
 启动接口设置监听的端口和私钥
