@@ -1,5 +1,5 @@
 ---
-title: "KVM 虚拟化"
+title: "KVM"
 date: 2021-11-10T16:36:54+08:00
 draft: true
 tags:
@@ -8,7 +8,7 @@ tags:
 description: KVM是x86架构且硬件支持虚拟化技术（如 intel VT 或 AMD-V）的 Linux 虚拟化解决方案。
 ---
 
-## 简介
+## KVM 简介
 
 KVM是开源软件，全称是kernel-based virtual machine（基于内核的虚拟机）。使用半虚拟化技术创建虚拟机的模块，可以将Linux内核转化为一个hypervisor[^1]。目前Red Hat只支持在64位的RHEL 5.4及以上的系统运行KVM（其余发行版也可使用），同时硬件需要支持VT技术；
 
