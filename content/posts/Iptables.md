@@ -38,26 +38,20 @@ iptables 防火墙在做数据包的过滤和转发时，有一套自己遵循�
 
 ## iptables 四表五链
 
+iptables防火墙就是规则策略的编写、它规定了数据包在什么时机完成什么事。
 
-
-| 表     | 链         |             |             |         |        |
-| :----- | :--------- | ----------- | ----------- | ------- | ------ |
-| raw    | PREROUTING | OUTPUT      |             |         |        |
-| mangle | INPUT      | PREROUTING  | POSTROUTING | FORWARD | OUTPUT |
-| nat    | PREROUTING | POSTROUTING | OUTPUT      | INPUT   |        |
-| filter | INPUT      | OUTPUT      | FORWARD     |         |        |
-
-*nat 表中的INPUT链为CentOS7后新加入
-
-
-
-
-
-
+| 表     | 链         |             |             |           |        |
+| :----- | :--------- | ----------- | ----------- | --------- | ------ |
+| raw    | PREROUTING | OUTPUT      |             |           |        |
+| mangle | INPUT      | PREROUTING  | POSTROUTING | FORWARD   | OUTPUT |
+| nat    | PREROUTING | POSTROUTING | OUTPUT      | INPUT[^2] |        |
+| filter | INPUT      | OUTPUT      | FORWARD     |           |        |
 
 
 
 **四表：每个表有不同的功能**
+
+*\*表：按照功能进行分类。*
 
 | 表名   | 作用       |
 | ------ | ---------- |
@@ -68,9 +62,9 @@ iptables 防火墙在做数据包的过滤和转发时，有一套自己遵循�
 
 
 
-
-
 **五链：针对不同的时机**
+
+\**链：按照时机进行分类。*
 
 | 链名        | 作用                                                         |
 | ----------- | ------------------------------------------------------------ |
@@ -82,11 +76,7 @@ iptables 防火墙在做数据包的过滤和转发时，有一套自己遵循�
 
 
 
-***\*表：按照功能进行分类。***
 
-**\**链：按照时机进行分类。***
-
-***\*iptables防火墙就是规则策略的编写、它规定了数据包在什么时机完成什么事。***
 
 
 
@@ -99,9 +89,9 @@ iptables 防火墙在做数据包的过滤和转发时，有一套自己遵循�
 | raw  | mangle | nat  | filter |
 | ---- | ------ | ---- | ------ |
 
+
+
 **链的匹配顺序**
-
-
 
 | 动作 | 链名       |             |             |
 | :--- | :--------- | ----------- | ----------- |
@@ -110,10 +100,6 @@ iptables 防火墙在做数据包的过滤和转发时，有一套自己遵循�
 | 转发 | PREROUTING | FORWARD     | POSTROUTING |
 | 主机 | INPUT      |             |             |
 | 网关 | PREROUTING | POSTROUTING | FORWARD     |
-
-
-
-
 
 
 
@@ -128,8 +114,6 @@ CentOS7以上的版本已不自带iptables-services的服务本体
 ```bash
 yum -y install iptables iptables-services
 ```
-
-
 
 禁用firewalld
 
@@ -571,4 +555,6 @@ systemctl enable iptables    #设置开启自启
 
 
 [^1]: 防火墙通过硬件或软件限制非法用户访问资源。防火墙工作在传输层（通过对不用软件标识所采用协议及端口、接收方采用相同协议及端口打开数据）
+
+[^2]: nat 表中的INPUT链为CentOS7后新加入
 
