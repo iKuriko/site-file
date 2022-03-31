@@ -3,9 +3,9 @@ title: "Iperf"
 date: 2022-03-25T11:38:58+08:00
 draft: true
 tags:
-  - iperf
+  - Network tools
   - CentOS Linux
-description: Iperf 是一个网络性能测试工具。可以测试最大TCP和UDP的带宽性能，具有多种参数，可以根据需要进行调整，可以报告带宽、延迟抖动和数据包丢失。
+description: iperf 是一个网络性能测试工具。可以测试最大TCP和UDP的带宽性能，具有多种参数，可以根据需要进行调整，可以报告带宽、延迟抖动和数据包丢失。
 ---
 
 

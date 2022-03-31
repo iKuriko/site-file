@@ -4,6 +4,7 @@ date: 2021-11-18T11:56:06+08:00
 draft: true
 tags:
   - CentOS Linux
+  - Linux services
 description: 在CentoOS上安装sqlserver，首先下载微软官方提供的在线yum源，安装mssql-server软件包，然后根据需要安装sqlserver的命令行工具或远程客户端进行连接
 ---
 

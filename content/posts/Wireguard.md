@@ -5,7 +5,7 @@ draft: true
 tags:
   - VPN
   - CentOS Linux
-  - WireGuard
+  - Linux services
 description: WireGuard 是一个简单、快速且安全的开源VPN软件 
 ---
 

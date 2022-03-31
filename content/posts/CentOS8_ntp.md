@@ -1,9 +1,10 @@
 ---
-title: "CentOS8 时间同步"
+title: "CentOS8 NTP"
 date: 2021-12-24T14:28:17+08:00
 draft: true
 tags:
   - CentOS Linux
+  - Linux services
 description: CentOS 系统安装过程中，会有选择时区的步骤。如果时区设置有误，可能导致系统时间与本地时间不同步。使得一些应用程序的时间戳发生错乱，出现各种报错。
 ---
 

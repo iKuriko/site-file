@@ -5,7 +5,7 @@ draft: true
 tags:
   - CentOS Linux
   - VPN
-  - OpenVPN
+  - Linux services
 description: 在 CentOS8 上部署 OVPN ，实现使用账号密码的客户端登录和代理上网
 ---
 

@@ -3,8 +3,9 @@ title: "KVM"
 date: 2021-11-10T16:36:54+08:00
 draft: true
 tags:
-  - KVM
+  - Virtualization	
   - CentOS Linux
+  - Linux services
 description: KVM是x86架构且硬件支持虚拟化技术（如 intel VT 或 AMD-V）的 Linux 虚拟化解决方案。
 ---
 

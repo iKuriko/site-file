@@ -1,10 +1,10 @@
 ---
-title: "Vim 常用命令"
+title: "Vim"
 date: 2021-09-09T16:56:06+08:00
 draft: true
 tags:
   - CentOS Linux
-  - Vim
+  - Other
 description: Vim编辑神器的常用快捷命令收集
 ---
 

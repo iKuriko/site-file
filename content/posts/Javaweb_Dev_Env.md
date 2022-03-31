@@ -1,14 +1,10 @@
 ---
-title: "Javaweb 开发环境搭建"
+title: "Javaweb Dev Env"
 date: 2021-09-09T16:53:45+08:00
 draft: true
 tags:
   - CentOS Linux
   - Javaweb
-  - JDK
-  - MySQL
-  - Tomcat
-  - Python
 description: 为 Javaweb 开发项目搭建基础环境，全部软件使用源码包手动安装
 ---
 
