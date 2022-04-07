@@ -135,6 +135,46 @@ nmcli device disconnec ens33
 nmcli device connect ens33
 ```
 
+
+
+## 参数详解
+
+add：新建连接
+
+type：连接类型
+
+mode：ip-tunnel的隧道模式
+
+con-name：网络连接名称
+
+ifname：设备接口名称
+
+modify：自定义修改设备
+
+ip-tunnel.ttl：ttl生命周期
+
+ip-tunnel.input-key：gre隧道的key值（input）
+
+ip-tunnel.output-key：gre隧道的key值（output）
+
+local：本地的IP地址
+
+remote：远程的IP地址
+
+autoconnect：自动连接  
+
+ipv4.addresses：IPv4地址配置
+
+ipv4.routes：IPv4路由配置
+
+ipv4.method：IPv4 配置方法
+
+ipv6.method：IPv6 配置方法
+
+master：隧道加入的网桥（按需添加）
+
+
+
 ## 创建虚拟设备
 
 ### Linux-br
@@ -153,35 +193,7 @@ nmcli connection add type bridge ifname Bridge con-name Bridge ipv4.method disab
 nmcli connection add type ip-tunnel mode gretap con-name gretap01 ifname gretap01 ip-tunnel.ttl 255 ip-tunnel.input-key 1 ip-tunnel.output-key 1 local 192.168.2.164 remote 192.168.2.91 ipv4.method disabled ipv6.method disabled master Bridge
 ```
 
-nmcli 参数详解：
 
-add：新建连接
-
-type：连接类型
-
-mode：ip-tunnel的隧道模式
-
-con-name：网络连接名称
-
-ifname：设备接口名称
-
-ip-tunnel.ttl：ttl生命周期
-
-ip-tunnel.input-key：gre隧道的key值（input）
-
-ip-tunnel.output-key：gre隧道的key值（output）
-
-local：本地的IP地址
-
-remote：远程的IP地址
-
-autoconnect：自动连接  
-
-ipv4.method：IPv4 配置方法
-
-ipv6.method：IPv6 配置方法
-
-master：隧道加入的网桥（按需添加）
 
 ### GRE
 
@@ -191,7 +203,15 @@ master：隧道加入的网桥（按需添加）
 nmcli connection add type ip-tunnel mode gre con-name gre01 ifname gre01 remote 192.168.2.91 local 192.168.2.164 ipv4.addresses 172.233.1.2/24 ip-tunnel.input-key 1 ip-tunnel.output-key 1 ip-tunnel.ttl 255 ipv4.method manual ipv6.method disable
 ```
 
-### vlan
+### veth-pair
+
+创建名为 veth-pair 的 veth 对
+
+```bash
+nmcli connection add type veth connection.interface-name veth01 veth.peer veth02 con-name veth-pair
+```
+
+### vlan-subif
 
 创建基于 ens33 网卡名为 ens33.1 的 vlan 子接口，加入 Bridge 网桥
 
@@ -216,6 +236,8 @@ nmcli connection add type vxlan id 100 remote 192.168.2.91 ipv4.addresses 172.23
 ```bash
 nmcli connection add type vxlan id 10 remote 192.168.2.91 ipv4.method disabled ipv6.method disabled ifname vxlan10 connection.id vxlan10 vxlan.parent ens32 master Bridge
 ```
+
+
 
 
 
