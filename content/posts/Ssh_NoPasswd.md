@@ -39,7 +39,7 @@ vim /etc/ssh/sshd_config
 
 两种方式实现（效果相同）
 
-1. 使用ssh-copy-id（ssh-copy-id只能通过22端口拷贝到目标主机）
+1.使用ssh-copy-id（ssh-copy-id只能通过22端口拷贝到目标主机）
 
 ```bash
 ssh-keygen -t rsa -b 1024			//生成rsa 1024位算法的密钥对
@@ -95,5 +95,5 @@ ssh <user>@<Server IP>
 
 Ps：
 
-1、客户端如需多个用户连接服务器，在每个用户下新建.ssh目录，并将authorized_keys拷贝到.ssh目录，设置所有者、组
+1、客户端如需多个用户连接服务器，在每个用户下新建.ssh目录，并将authorized_keys拷贝到.ssh目录，设置所有者、组  
 2、如需多个客户端连接服务器，使用：~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys，这样实现客户端公钥文件追加
