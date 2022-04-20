@@ -793,11 +793,11 @@ vim /etc/ansible/ansible.cfg
 
 在ansible-galaxy命令后面跟一个init参数，创建一个新的角色信息，且建立成功后便会在当前目录下生成出一个新的目录：
 
-```
+```bash
 cd /etc/ansible/roles/
 ```
 
-```
+```bash
 ansible-galaxy init apache
 - Role apache was created successfully
 ```
@@ -1099,7 +1099,7 @@ Jinja2是Python语言中一个被广泛使用的模板引擎，最初的设计�
 
  
 
-```
+```bash
 ansible-doc setup
 
 > SETUP  (/usr/lib/python3.6/site-packages/ansible/modules/system/setup.py)
@@ -1152,7 +1152,7 @@ setup模块的作用是自动收集受管主机上的**变量**信息，使用-a
 
  
 
-```
+```bash
 [root@play1 ~]# ansible all -m setup -a 'filter="*ip*"'
 
 192.168.88.139 | SUCCESS => {
@@ -1717,7 +1717,7 @@ vim issue.yml
 
  
 
-```
+```bash
 [root@play1 ~]# ansible-playbook issue.yml 
 
 PLAY [修改文件内容] **********************************************************************
@@ -1838,7 +1838,7 @@ EXAMPLES:
 
  
 
-```
+```bash
 vim chmod.yml
 ```
 
@@ -1954,7 +1954,7 @@ $ANSIBLE_VAULT;1.1;AES256
 
 如果不想使用原始密码了呢？也可以使用rekey参数手动对文件进行改密操作，同时应结合--ask-vault-pass参数进行修改，否则Ansible服务会因接收不到用户输入的旧密码值而拒绝新的密码变更请求：
 
-```
+```bash
 ansible-vault rekey --ask-vault-pass locker.yml 
 Vault password: 
 New Vault password: 

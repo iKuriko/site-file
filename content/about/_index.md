@@ -2,13 +2,6 @@
 title: "About"
 ---
 
-
-
-
-
-
-![about.jpg](/images/about.jpg)
-
 　　
 
 > Welcome to Kuriko's blog  
