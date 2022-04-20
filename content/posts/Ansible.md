@@ -132,13 +132,13 @@ Ansible是基于SSH实现自动化控制的，sshd服务在初次连接时回要
 
  Ansible常用变量汇总
 
-| 参数                                             | 作用          |
-| ------------------------------------------------ | ------------- |
-| ansible_ssh_host                                 | 受管主机名    |
-| ansible_ssh_port                                 | 端口号        |
-| ansible_ssh_user                                 | 默认账号      |
-| ansible_ssh_pass                                 | 默认密码      |
-| ansible_[shell](https://www.linuxcool.com/)_type | Shell终端类型 |
+| 参数               | 作用          |
+| ------------------ | ------------- |
+| ansible_ssh_host   | 受管主机名    |
+| ansible_ssh_port   | 端口号        |
+| ansible_ssh_user   | 默认账号      |
+| ansible_ssh_pass   | 默认密码      |
+| ansible_shell_type | Shell终端类型 |
 
  
 
