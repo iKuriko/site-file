@@ -26,7 +26,7 @@ Fonts
 
 <p style="text-align:center;color:red;font-size:20px;">这是红色</p> 
 
-```
+```md
 <p style="text-align:center;color:red;font-size:20px;font-family:">这是红色</p> 
 ```
 

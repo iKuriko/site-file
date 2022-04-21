@@ -1121,7 +1121,7 @@ setup模块的作用是自动收集受管主机上的**变量**信息，使用-a
 
  
 
-**FQDN（Fully Qualified Domain Name，完全限定域名）**用于在逻辑上准确表示出主机的位置。FQDN常常被作为主机名的完全表达形式，比 /etc/hostname 文件中定义的主机名更加严谨和准确。通过输出信息可得知，ansible_fqdn变量保存有主机名称。随后进行下一步操作：
+**FQDN（Fully Qualified Domain Name，完全限定域名）**  用于在逻辑上准确表示出主机的位置。FQDN常常被作为主机名的完全表达形式，比 /etc/hostname 文件中定义的主机名更加严谨和准确。通过输出信息可得知，ansible_fqdn变量保存有主机名称。随后进行下一步操作：
 
  
 
