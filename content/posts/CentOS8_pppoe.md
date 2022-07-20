@@ -13,7 +13,7 @@ description: 使用Huawei ME906s 4G模块PPPOE拨号上网
 
 1.插上4G模块，虚拟出5个USB设备，通过以下命令查看是否连接，输出如下
 
- 
+
 
 ```bash
 ls /dev/ttyUSB*
@@ -33,7 +33,7 @@ dmesg | grep ttyUSB
 lsusb
 Bus 001 Device 005: ID 12d1:15c1 Huawei Technologies Co., Ltd. ME906s LTE M.2 Module
 Bus 001 Device 004: ID 05e3:0608 Genesys Logic, Inc. Hub
-Bus 001 Device 002: ID 8087:07e6 Intel Corp. 
+Bus 001 Device 002: ID 8087:07e6 Intel Corp.
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
@@ -43,13 +43,13 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 2.新建拨号脚本文件夹
 
- 
+
 
 ```bash
 mkdir /etc/ppp/peers/
 ```
 
- 
+
 
 3.拨号的脚本
 
@@ -60,7 +60,7 @@ vim /etc/ppp/peers/gprsdial
 
 
 ```bash
-# This is pppd script for China Mobile, used Huawei GTM900-B GPRS Module
+# This is pppd script for China Mobile, used Huawei ME906s GPRS Module
 
 /dev/ttyUSB0
 9600
@@ -87,13 +87,13 @@ connect '/usr/sbin/chat -s -v -f /etc/ppp/gprs-connect-chat'
 #disconnect '/bin/chat -v -f /etc/ppp/gprs-disconnect-chat'
 ```
 
- 
 
- 
+
+
 
 4.校验文本/etc/ppp/gprs-connect-chat的具体内容如下：
 
- 
+
 
 ```bash
 vim /etc/ppp/gprs-connect-chat
@@ -118,7 +118,7 @@ OK ATDT*99*1#
 CONNECT
 ```
 
- 
+
 
 5.拨号验证（两种方式效果相同）：
 
@@ -128,7 +128,7 @@ pppd call gprsdial &
 pppd file /etc/ppp/peers/gprsdial &
 ```
 
- 
+
 
 6.编写拨号脚本，一键拨号，获取DNS
 
@@ -155,9 +155,9 @@ echo $dns2
 echo "dns ok"
 ```
 
- 
 
- 
+
+
 
 ---
 
@@ -194,7 +194,7 @@ refuse-chap       #外置模块刷新DNS
 
 refuse-mschap
 
-refuse-mschap-v2 
+refuse-mschap-v2
 
 user "cmnet"      #用户，中国移动。设置由对方验证本地系统的用户名。
 
@@ -234,4 +234,3 @@ References & Resources：
 [在ARM-linux上实现4G模块PPP拨号上网](https://blog.csdn.net/zqixiao_09/article/details/52540887)
 
 [etc/ppp/gprs文件详解](http://blog.chinaunix.net/uid-31410005-id-5783842.html)
-
