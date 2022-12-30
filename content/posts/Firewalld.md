@@ -9,8 +9,6 @@ tags:
 description: Firewalld是基于区域(zone)的防火墙规则管理工具
 ---
 
-## 
-
 ## 放行协议
 
 放行`drop`区域的`ip`协议
@@ -106,15 +104,11 @@ firewall-cmd --permanent --zone=external --direct --add-rule ipv4 nat POSTROUTIN
 firewall-cmd --reload
 ```
 
- 
-
 ## 命令语法
 
 ```bash
 firewall-cmd <options>
 ```
-
-options：
 
 ```bash
 --list-*    查看
@@ -126,8 +120,6 @@ options：
 --change-*    变更
 --query-*    查询
 ```
-
- 
 
 ## 常用命令
 
