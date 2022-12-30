@@ -11,7 +11,7 @@ description: 在CentOS7上搭建PPPoE Server
 
 ## 安装软件包
 
-```
+```bash
 yum -y install rp-pppoe
 ```
 
@@ -19,7 +19,7 @@ yum -y install rp-pppoe
 
 vim /etc/ppp/pppoe-server-options
 
-```
+```bash
 # PPP options for the PPPoE server
 # LIC: GPL
 require-chap
@@ -35,7 +35,7 @@ ms-dns 8.8.8.8
 
 vim /etc/ppp/pppoe-server-env
 
-```
+```bash
 INT=enp1s0
 LOCAL=192.168.1.1
 START=192.168.1.2
@@ -46,7 +46,7 @@ NUMBER=253
 
 vim /etc/ppp/chap-secrets
 
-```
+```bash
 # Secrets for authentication using CHAP
 # client        server  secret                  IP addresses
 "test" * "123456" *
@@ -56,7 +56,7 @@ vim /etc/ppp/chap-secrets
 
 vim /etc/systemd/system/pppoe-server.service
 
-```
+```bash
 [Unit]
 Description=PPPoE Server.
 After=syslog.target
@@ -72,7 +72,7 @@ WantedBy=multi-user.target
 
 ## 启动服务&开机自启
 
-```
+```bash
 systemctl start pppoe-server
 systemctl enable pppoe-server
 ```
