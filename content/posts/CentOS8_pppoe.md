@@ -1,5 +1,5 @@
 ---
-title: "CentOS8 PPPE 4G"
+title: "CentOS8 PPPoE 4G"
 date: 2022-03-09T11:44:50+08:00
 draft: true
 tags:
