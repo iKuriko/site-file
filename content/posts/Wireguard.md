@@ -21,8 +21,6 @@ WireGuard 利用最新的加密技术，提供更快、更精简、更安全、�
 
 这些是 WireGuard 越来越受欢迎的一些原因。Linux 创造者 Linus Torvalds 非常喜欢 WireGuard，以至于将其合并到 Linux Kernel 5.6 中以取代OpenVPN。
 
-
-
 ## 安装
 
 添加软件包仓库源
@@ -36,8 +34,6 @@ yum install epel-release elrepo-release yum-plugin-elrepo -y
 ```bash
 yum install kmod-wireguard wireguard-tools qrencode -y
 ```
-
-
 
 ## IPv4模式
 
@@ -69,13 +65,9 @@ wg set wg0 listen-port 42333 private-key ./test_server.pri
 ip addr add 198.18.233.1/24 dev wg0
 ```
 
-
-
 **添加客户端**
 
 > WireGuard没有明确的服务端和客户端的定义，他们是对等的一对peer，这里为了方便理解，模拟了一台服务器和一台PC机的账号创建。将服务器命名为client1，终端设备PC命名为client2。
-
-
 
 为client1（另一台服务端）生成公钥和私钥
 
@@ -107,7 +99,11 @@ wg set wg0 peer $(cat ./test_client1.pub) allowed-ips 198.18.233.2/32
 wg set wg0 peer $(cat ./test_client2.pub) allowed-ips 198.18.233.3/32
 ```
 
+删除客户端
 
+```bash
+wg set wg_qlzy peer  $(cat ./test_client.pub) remove
+```
 
 **保存配置**
 
@@ -122,8 +118,6 @@ touch /etc/wireguard/wg0.conf
 ```bash
 wg-quick save wg0
 ```
-
-
 
 **启用接口**
 
@@ -144,10 +138,6 @@ wg-quick down wg0
 ```bash
 systemctl enable wg-quick@wg0.service
 ```
-
-
-
-
 
 ### 客户端配置（Client1）
 
@@ -187,8 +177,6 @@ SNAT策略（如有必要）
 iptables -t nat -A POSTROUTING -o wg0 -j SNAT --to-source 198.18.233.2
 ```
 
-
-
 ### 终端设备配置（Client2）
 
 client2的配置文件
@@ -213,15 +201,9 @@ PersistentKeepalive = 1
 qrencode -o test_client.png < test_client.conf
 ```
 
-
-
 ## IPv6模式
 
-
-
 > Wireguard使用IPv6的配置与IPv4并无太大差异，这里只做简单演示
-
-
 
 ### 服务端配置（Server）
 
@@ -314,4 +296,3 @@ SNAT策略（如有必要）
 ```bash
 ip6tables -t nat -A POSTROUTING -o wg1 -j SNAT --to-source fec0:1001:1001:1001:1001:1001:1234:0002
 ```
-
