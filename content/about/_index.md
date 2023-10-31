@@ -8,7 +8,7 @@ title: "About"
 
 　　
 
-✍️记录内容：  
+✍️内容：  
 
 主要记录个人学习笔记（内容如有错误，还请指正）  
 
@@ -16,45 +16,40 @@ title: "About"
 
 　　
 
-🌐暂用域名：  
+🌐域名：  
 
-[kuriko.xyz](https://www.kuriko.xyz)  
 [ikuriko.github.io](https://ikuriko.github.io)  
 
 　　
 
 
-📃站点说明：  
+📃说明：  
 
-基于 Hugo GitPages 搭建， 使用 MemE 极简风主题   
+站点基于 Hugo GitPages 搭建， 使用 MemE 主题   
 
 未加入搜索引擎，为了页面简洁，关闭评论  
 
-~~不定时诈尸更新~~  
-
   　
 
-🔧个人常用软件：  
+🔧常用：  
 
-OS：Windows 10、RHEL Linux、Arch Linux
+OS：RHEL Linux
 
-Browser：Chrome、Firefox
+Browser：Chrome
 
-Editor ：Typora、Atom、Sublime
+Editor ：Typora
 
-Terminal：Xshell、MobaXterm、SecureCRT
+Terminal：Xshell
 
 IDE：PyCharm
 
-Vm：VMware Workstation、Virtual Box
+Note：Onenote
 
-Note：Onenote、YuQue
-
-CAD：CAXA CAD、Auto CAD
+CAD：Auto CAD
 
   　
 
-📖所拥有的其他页面（暂不更新）：
+📖其他站点（暂不更新）：
 
 https://blog.51cto.com/kuriko
 
