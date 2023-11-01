@@ -1,5 +1,5 @@
 ---
-title: "SSH NOPASSWD"
+title: "SSH No Password"
 date: 2022-04-15T17:27:16+08:00
 draft: true
 tags:
