@@ -114,7 +114,7 @@ modprobe bonding		//加载模块
 lsmod | grep bonding	//查看是否加载成功
 ```
 
-```
+```bash
 echo "modprobe bonding" >> /etc/rc.local    //加入开机自启 
 ```
 
@@ -299,52 +299,51 @@ nmcli con add type team-slave con-name team0-port2 ifname ens33 master team0
 
 JSON语法格式如下（使用`nmtui`进行配置时需要手动输入）
 
-```
+```bash
 ‘{“runner”：{“name”：“METHOD”}}’
 ```
 
 为组接口配置IP地址、网关、DNS等参数
 
-```
+```bash
 nmcli con mod team0 ipv4.addresses "192.168.100.100/24"
 ```
 
-```
+```bash
 nmcli con mod team0 ipv4.gateway "192.168.100.1"
 ```
 
-```
+```bash
 nmcli con mod team0 ipv4.dns "192.168.100.1"
 ```
 
-```
+```bash
 nmcli con mod team0 ipv4.method manual
 ```
 
-```
+```bash
 nmcli con up team0-port1
 ```
 
-```
+```bash
 nmcli con up team0-port2
 ```
 
-```
+```bash
 nmcli con up team0
 ```
 
 查看组接口状态
 
-```
+```bash
 teamdctl team0 state
 ```
 
 列出team0中的端口
 
-```
+```bash
 teamnl team0 ports
 ```
-
 
 
 
