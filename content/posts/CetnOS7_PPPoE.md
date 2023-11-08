@@ -17,7 +17,9 @@ yum -y install rp-pppoe
 
 ## 修改配置文件
 
+```bash
 vim /etc/ppp/pppoe-server-options
+```
 
 ```bash
 # PPP options for the PPPoE server
@@ -33,7 +35,11 @@ ms-dns 114.114.114.114
 ms-dns 8.8.8.8
 ```
 
+配置分发的 IP 地址池
+
+```bash
 vim /etc/ppp/pppoe-server-env
+```
 
 ```bash
 INT=enp1s0
@@ -44,7 +50,9 @@ NUMBER=253
 
 ## 添加用户
 
+```bash
 vim /etc/ppp/chap-secrets
+```
 
 ```bash
 # Secrets for authentication using CHAP
@@ -54,7 +62,9 @@ vim /etc/ppp/chap-secrets
 
 ## 服务启动文件
 
+```bash
 vim /etc/systemd/system/pppoe-server.service
+```
 
 ```bash
 [Unit]

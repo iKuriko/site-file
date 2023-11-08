@@ -4,49 +4,23 @@ date: 2021-09-02T16:55:55+08:00
 draft: true
 tags:
   - Other
-description: Test page
+description: 
 ---
 
 
 
+# Test page
 
-
-Fonts 
-
-<p style="text-align:center;color:;font-size:20px;font-family:arial">这是居中</p> 
-
-```md
-<p style="text-align:center;color:;font-size:20px;font-family:">这是居中</p> 
-```
-
-<p style="text-align:center;color:red;font-size:40px;">这是大红</p> 
-
-```md
-<p style="text-align:center;color:red;font-size:40px;font-family:">这是红色</p> 
-```
-
-<p style="text-align:center;color:blue;font-size:30px;font-family:">这是中蓝</p> 
-
-```md
-<p style="text-align:center;color:green;font-size:30px;font-family:">这是中蓝</p> 
-```
-
-<p style="text-align:center;color:green;font-size:20px;font-family:">这是小绿</p> 
-
-```md
-<p style="text-align:center;color:green;font-size:20px;font-family:">这小绿</p> 
-```
-
-Image
+## Image
 
 
 
-<img src="/images/hello-world.jpg" alt="" style="width:50%" />
+<img src="/images/hello-world.jpg" alt="图片宽度50%" style="width:50%" />
 
 
 
 ```md
-<img src="/images/hello-world.jpg" alt="" style="width:50%" />
+<img src="/images/hello-world.jpg" alt="图片宽度50%" style="width:50%" />
 ```
 
 
@@ -61,15 +35,15 @@ Image
 
 
 
-Form
+## Form
 
-| 这是一个表格 |       |
+| 列表1 | 列表2 |
 | :----------- | :---- |
 | 1            | tesT1 |
 | 2            | tesT2 |
 | 3            | tesT3 |
 ```md
-| 这是一个表格 |       |
+| 列表1 | 列表2 |
 | :----------- | :---- |
 | 1            | tesT1 |
 | 2            | tesT2 |
@@ -78,19 +52,32 @@ Form
 
 
 
-这是一个[超链接](https://ikuriko.github.io/posts/hello_world/)
+## Link
+
+[超链接](https://ikuriko.github.io/posts/hello_world/)
 
 ```md
-这是一个[超链接](https://ikuriko.github.io/posts/hello_world/)
+[超链接](https://ikuriko.github.io/posts/hello_world/)
 ```
 
 
 
-这是一个脚注[^1]
+## Footnote
 
-[^1]: 这是一个脚注
+脚注[^233]
 
-​		
+[^233]: 这是一个脚注
+
+
+```md
+脚注[^233]
+
+[^233]: 这是一个脚注
+```
+
+
+
+## Block
 
 
 ```md
@@ -105,7 +92,37 @@ Form
 
 
 
-这是一个水平分割线
+`这是一个高亮代码块`
+
+```md
+`这是一个高亮代码块`
+```
+
+
+
+
+$$
+这是一个公式块：1+1=2
+$$
+
+```md
+$$
+1+1=2 这是一个公式块
+$$
+```
+
+
+
+
+
+
+
+## Line
+
+
+分割线
+
+  
 
 ------
 
@@ -117,14 +134,35 @@ Form
 
 
 
-这是一个公式块
 
-$$
-1+1=2
-$$
+
+## Fonts 
+
+<p style="text-align:center;color:;font-size:20px;font-family:arial">居中</p> 
 
 ```md
-$$
-1+1=2
-$$
+<p style="text-align:center;color:;font-size:20px;font-family:">居中</p> 
 ```
+
+<p style="text-align:center;color:red;font-size:20px;">小红</p> 
+
+```md
+<p style="text-align:center;color:red;font-size:20px;font-family:">小红</p> 
+```
+
+<p style="text-align:center;color:blue;font-size:20px;font-family:">小蓝</p> 
+
+```md
+<p style="text-align:center;color:green;font-size:20px;font-family:">小蓝</p> 
+```
+
+<p style="text-align:center;color:green;font-size:20px;font-family:">小绿</p> 
+
+```md
+<p style="text-align:center;color:green;font-size:20px;font-family:">小绿</p> 
+```
+
+
+
+
+

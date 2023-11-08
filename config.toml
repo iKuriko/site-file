@@ -109,7 +109,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://ikuriko.github.io"
     # 推特
-    twitter = "callousmaster"
+    twitter = "akur1ko"
 
 # 相关文章
 [related]
@@ -372,7 +372,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "callousmaster"
+    siteTwitter = "akur1ko"
     # 说明：用于 Twitter Cards
 
 

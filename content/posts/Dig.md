@@ -13,7 +13,7 @@ description: 非常好用的DNS查询工具
 **dig 命令由 bind-utils 软件包提供**
 
 ```bash
-yum install bind-utils
+yum install bind-utils -y
 ```
 
 
@@ -24,7 +24,7 @@ yum install bind-utils
 dig www.baidu.com
 ```
 
-```bash
+```
 #dig www.baidu.com
 
 ; <<>> DiG 9.11.26-RedHat-9.11.26-6.el8 <<>> www.baidu.com
@@ -88,7 +88,7 @@ www.a.shifen.com.	124	IN	A	180.101.50.188
 dig www.baidu.com CNAME
 ```
 
-```bash
+```
 #dig www.baidu.com CNAME
 
 ; <<>> DiG 9.11.26-RedHat-9.11.26-6.el8 <<>> www.baidu.com CNAME
@@ -120,7 +120,7 @@ www.baidu.com.		848	IN	CNAME	www.a.shifen.com.
 dig @223.5.5.5 www.baidu.com
 ```
 
-```bash
+```
 #dig @223.5.5.5 www.baidu.com
 
 ; <<>> DiG 9.11.26-RedHat-9.11.26-6.el8 <<>> @223.5.5.5 www.baidu.com
@@ -155,7 +155,7 @@ www.a.shifen.com.	24	IN	A	110.242.68.4
 dig -x 223.5.5.5 +short
 ```
 
-```bash
+```
 # dig -x 223.5.5.5 +short
 public1.alidns.com.
 ```
@@ -166,7 +166,7 @@ public1.alidns.com.
 dig -x 223.5.5.5
 ```
 
-```bash
+```
 # dig -x 223.5.5.5
 
 ; <<>> DiG 9.11.26-RedHat-9.11.26-6.el8 <<>> -x 223.5.5.5
@@ -198,7 +198,7 @@ dig -x 223.5.5.5
 dig +trace www.baidu.com
 ```
 
-```bash
+```
 # dig +trace www.baidu.com
 
 ; <<>> DiG 9.11.26-RedHat-9.11.26-6.el8 <<>> +trace www.baidu.com
