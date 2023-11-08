@@ -4,7 +4,6 @@ date: 2021-11-01T17:41:41+08:00
 draft: true
 tags:
   - CentOS Linux
-  - Other
 description: 安装了 CentOS Linux 发行版的服务器正在运行，并且无法进行关机操作时，下面的命令可以扫描到新插入的硬盘 
 ---
 
