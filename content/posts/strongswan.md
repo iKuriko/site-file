@@ -1,6 +1,6 @@
 ---
 title: "Strongswan VPN"
-date: 2025-01-16T17:51:41+08:00
+date: 2024-12-20T17:51:41+08:00
 draft: true
 tags:
   - Linux services
