@@ -94,7 +94,7 @@ copy running-config startup-config & w		    #保存配置
 
 
 
-## #IS-IS
+### #IS-IS
 
 ```bash
 router isis vrf1 vrf vrf1    					#在vrf1 下启用isis，命名为vrf1
@@ -122,7 +122,7 @@ show isis vrf vrf1 neighbor    					#查看vrf1的邻居关系表
 
 
 
-## #BGP
+### #BGP
 
 ```bash
 router bgp 64931								#启用bgp AS号：64931
@@ -158,7 +158,7 @@ ip bgp neighbors 198.18.224.214					#查看bgp邻居详细信息
 
 
 
-### #weight（BGP属性）
+#### #weight（BGP属性）
 
 ```bash
 configure terminal
@@ -174,7 +174,7 @@ neighbor 100.0.10.1 weight 120					#给邻居设置weight(权重值)。默认权
 
 
 
-### #route-map（BGP属性）
+#### #route-map（BGP属性）
 
 ```bash
 configure terminal
@@ -192,7 +192,7 @@ neighbor 100.0.10.1 route-map routemap1 out		#应用route-map给邻居，动作�
 
 
 
-### #ip prefix-list（BGP属性）
+#### #ip prefix-list（BGP属性）
 
 ```bash
 configure terminal
