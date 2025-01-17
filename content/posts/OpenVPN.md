@@ -649,6 +649,7 @@ cp /usr/share/doc/openvpn/sample/sample-config-files/client.conf /etc/openvpn
 [root@play-1 openvpn]# cat /etc/openvpn/client.conf | grep -Ev "^#|^;|^$"
 
 client
+port 1194
 dev tap
 proto udp
 remote 192.168.88.133 55003
@@ -682,6 +683,9 @@ resolv-retry infinite
 ```bash
 #客户端
 client
+
+#监听端口
+port 1194
 
 #隧道类型，与服务器一致
 dev tap
