@@ -11,10 +11,6 @@ description: 使用 wondershaper 工具对 Linux 下的网络接口限速
 
 
 
-## 接口限速
-
-
-
 ## 网络接口限速
 
 ```bash
