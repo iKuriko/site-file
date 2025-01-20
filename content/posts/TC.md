@@ -14,21 +14,25 @@ description: 使用 wondershaper 工具对 Linux 下的网络接口限速
 ## 网络接口限速
 
 ```bash
-yum install iproute-tc						#安装依赖软件包（基于tc命令实现）
+#安装依赖软件包（基于tc命令实现）
+yum install iproute-tc						
 ```
 
 ```bash
-git clone https://github.com/magnific0/wondershaper.git     #下载 wondershaper 软件包
+#下载 wondershaper 软件包
+git clone https://github.com/magnific0/wondershaper.git     
 ```
 
 ```bash
-ln -s /root/wondershaper-master/wondershaper /usr/local/sbin/wondershaper	#添加快捷软链
+#添加快捷软链接
+ln -s /root/wondershaper-master/wondershaper /usr/local/sbin/wondershaper	
 ```
 
 添加限速策略
 
 ```bash
-wondershaper -a 接口名 -d 下载带宽 -u 上传带宽			#-a（接口）、-d(下载) 、-u（上传） 单位（kb）
+#-a（接口）、-d(下载) 、-u（上传） 单位（kb）
+wondershaper -a 接口名 -d 下载带宽 -u 上传带宽			
 ```
 
 查看限速策略
@@ -48,7 +52,8 @@ wondershaper -c -a 接口名
 使用示例
 
 ```bash
-wondershaper -a enp1s0 -d 20480 -u 20480    #对enp1s0接口的下载带宽进行限速，限速为20MB
+#对enp1s0接口的下载带宽进行限速，限速为20MB
+wondershaper -a enp1s0 -d 20480 -u 20480    
 ```
 
 
@@ -58,7 +63,8 @@ wondershaper -a enp1s0 -d 20480 -u 20480    #对enp1s0接口的下载带宽进�
 
 
 ```bash
-yum install iproute-tc kernel-modules-extra -y    #安装依赖软件包
+#安装依赖软件包
+yum install iproute-tc kernel-modules-extra -y    
 ```
 
 ```bash

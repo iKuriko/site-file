@@ -59,18 +59,20 @@ sed -i "s/##watchfrr_options=\"--netns\"/watchfrr_options=\"--netns\"/g" /etc/fr
 ```
 
 ```bash
-systemctl start frr     #启动服务
+#启动服务
+systemctl start frr     
 ```
 
 ```bash
-systemctl enable frr    #开机自启
+#开机自启
+systemctl enable frr    
 ```
 
 
 
 ## 常用命令
 
-### #vtysh		#进入模拟器命令行
+### #vtysh	进入FRR命令行
 
 ```bash
 configure terminal 					  			#进入全局配置
@@ -158,7 +160,7 @@ ip bgp neighbors 198.18.224.214					#查看bgp邻居详细信息
 
 
 
-#### #weight（BGP属性）
+#### #weight
 
 ```bash
 configure terminal
@@ -174,7 +176,7 @@ neighbor 100.0.10.1 weight 120					#给邻居设置weight(权重值)。默认权
 
 
 
-#### #route-map（BGP属性）
+#### #route-map
 
 ```bash
 configure terminal
@@ -192,7 +194,7 @@ neighbor 100.0.10.1 route-map routemap1 out		#应用route-map给邻居，动作�
 
 
 
-#### #ip prefix-list（BGP属性）
+#### #ip prefix-list
 
 ```bash
 configure terminal
