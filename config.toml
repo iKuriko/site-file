@@ -191,7 +191,7 @@ uglyURLs = false
     ## 菜单栏
      [[menu.main]]
         url = "/"
-        name = "首页"
+        name = ""
         weight = 1
         pre = "internal"
         post = "home"
@@ -332,7 +332,7 @@ uglyURLs = false
     # 3. posts     文章摘要
     # 4. page      普通页面
 
-    homeLayout = "posts"
+    homeLayout = "page"
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
