@@ -4,8 +4,7 @@ date: 2022-03-31T11:39:01+08:00
 draft: true
 description: iftop 可以监控 Linux 网卡的实时流量，查看数据流向、IP地址和端口等信息。
 tags:
-  - Network tools
-  - CentOS Linux
+  - Tools
 ---
 
 ## 命令

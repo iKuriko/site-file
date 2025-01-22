@@ -3,9 +3,7 @@ title: "Iptables"
 date: 2022-03-28T11:23:42+08:00
 draft: true
 tags:
-  - CentOS Linux
-  - Linux services
-  - Network tools
+  - Tools
 description: netfilter/iptables 是 Linux 内核集成的IP信息包过滤系统，有利于在 Linux 系统上更好的控制IP信息包过滤和防火墙配置
 ---
 

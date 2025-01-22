@@ -3,7 +3,6 @@ title: "OpenVPN"
 date: 2022-03-18T11:27:46+08:00
 draft: true
 tags:
-  - CentOS Linux
   - VPN
   - Linux services
 description: 在 CentOS8 上部署 OVPN ，实现使用账号密码的客户端登录和代理上网

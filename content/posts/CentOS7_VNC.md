@@ -3,7 +3,6 @@ title: "CentOS7 VNC"
 date: 2021-11-03T17:38:40+08:00
 draft: true
 tags:
-  - CentOS Linux
   - Linux services
 description: 在 CentOS7 上安装VNC进行远程桌面连接
 ---

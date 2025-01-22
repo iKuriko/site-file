@@ -3,8 +3,7 @@ title: "Linux Troubleshooting Commands"
 date: 2021-11-16T11:01:07+08:00
 draft: true
 tags:
-  - CentOS Linux
-  - Network tools
+  - Tools
 description: 在常见的 Linux 发行版本下，排查故障的常用命令
 ---
 

@@ -3,7 +3,7 @@ title: "Hugo+GithubPages"
 date: 2021-09-07T14:20:48+08:00
 draft: true
 tags:
-  - Other
+  - Hugo
 description: 本文为此站点的构建方式
 ---
 

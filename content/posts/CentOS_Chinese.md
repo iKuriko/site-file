@@ -3,7 +3,7 @@ title: "CentOS Chinese"
 date: 2021-11-05T10:34:28+08:00
 draft: true
 tags:
-  - CentOS Linux
+  - Other
 description: 为 CentOS 系统安装中文语言支持
 ---
 

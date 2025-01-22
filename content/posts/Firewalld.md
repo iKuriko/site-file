@@ -3,9 +3,7 @@ title: "Firewalld"
 date: 2022-12-30T14:22:06+08:00
 draft: true
 tags:
-  - CentOS Linux
-  - Linux services
-  - Network tools
+  - Tools
 description: Firewalld是基于区域(zone)的防火墙规则管理工具
 ---
 

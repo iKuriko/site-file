@@ -3,7 +3,6 @@ title: "CAD"
 date: 2021-09-23T15:57:29+08:00
 draft: true
 tags:
-  - CAD
   - Other
 description: 记录绘制 2D 平面图常用的CAD快捷命令
 ---

@@ -3,8 +3,7 @@ title: "Dig"
 date: 2023-11-07T16:21:11+08:00
 draft: true
 tags:
-  - CentOS Linux
-  - Network tools
+  - Tools
 description: 非常好用的DNS查询工具
 ---
 

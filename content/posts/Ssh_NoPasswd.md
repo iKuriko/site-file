@@ -3,7 +3,7 @@ title: "SSH No Password"
 date: 2022-04-15T17:27:16+08:00
 draft: true
 tags:
-  - CentOS Linux
+  - Other
 description: 生成 ssh 密钥对，实现客户端到服务器的免密 ssh 用户登录
 ---
 

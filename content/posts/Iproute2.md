@@ -3,8 +3,7 @@ title: "Iproute2"
 date: 2022-04-02T14:23:55+08:00
 draft: true
 tags:
-  - CentOS Linux
-  - Network tools
+  - Tools
 description: Iproute2 是 Linux 下强大的网络配置工具，用来显示或配置 Linux 主机的路由、网络设备、策略路由和隧道等功能。
 ---
 

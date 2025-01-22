@@ -3,7 +3,7 @@ title: "Yum"
 date: 2022-03-30T14:48:31+08:00
 draft: true
 tags:
-  - CentOS Linux
+  - Tools
 description: YUM 是基于RPM包的软件包管理工具，能自动解决 RPM 包复杂的依赖关系，并且一次性安装所有依赖的软件包
 ---
 

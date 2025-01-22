@@ -3,7 +3,6 @@ title: "Vsftpd"
 date: 2021-10-14T15:16:25+08:00
 draft: true
 tags:
-  - CentOS Linux
   - Linux services
 description: Vsftpd 解决了在多样设备之间，使用加密方式安全传输文件的问题
 ---

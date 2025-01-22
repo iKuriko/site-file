@@ -3,7 +3,6 @@ title: "CetnOS7 PPPoE Server"
 date: 2022-12-30T10:29:28+08:00
 draft: true
 tags:
-  - CentOS Linux
   - Linux services
   - PPPOE
 description: 在CentOS7上搭建PPPoE Server

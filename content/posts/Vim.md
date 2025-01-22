@@ -3,8 +3,7 @@ title: "Vim"
 date: 2021-09-09T16:56:06+08:00
 draft: true
 tags:
-  - CentOS Linux
-  - Other
+  - Tools
 description: Vim编辑神器的常用快捷命令收集
 ---
 
