@@ -8,28 +8,28 @@ title: "About"
 
 　　
 
-✍️内容：  
+✍️站点内容：  
 
 主要记录个人学习笔记 
 
 　　
 
-🌐域名：  
+🌐站点域名：  
 
 [ikuriko.github.io](https://ikuriko.github.io)  
 
 　　
 
 
-📃说明：  
+📃站点说明：  
 
-站点基于 Hugo GitPages 搭建， 使用 MemE 主题   
+站点基于 Hugo GitPages 搭建， 使用 [MemE](https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-cn.md) 极简风主题   
 
 未加入搜索引擎，为了页面简洁，关闭评论  
 
   　
 
-🔧常用：  
+🔧常用工具：  
 
 OS：RHEL Linux
 
@@ -49,11 +49,9 @@ CAD：Auto CAD
 
 📖其他站点（暂不更新）：
 
-[51CTO](https://blog.51cto.com/kuriko)
+[CSDN：blog.csdn.net/callousmaster](https://blog.csdn.net/Callousmaster)
 
-[CSDN](https://blog.csdn.net/Callousmaster)
-
-
+[51CTO：blog.51cto.com/kuriko](https://blog.51cto.com/kuriko)
 
 
 
