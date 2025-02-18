@@ -10,7 +10,7 @@ description: Linux 下的 L2TP（Layer 2 Tunneling Protocol）通常与 IPsec �
 
 
 
-### 一、安装依赖包
+## 安装依赖包
 
 ```bash
 yum install -y epel-release
@@ -18,7 +18,7 @@ yum install -y libreswan xl2tpd ppp
 ```
 
 
-### 二、配置IPSec（Libreswan）
+## 配置IPSec（Libreswan）
 
 **1. 修改`/etc/ipsec.conf`**
 
@@ -71,7 +71,7 @@ chmod 600 /etc/ipsec.secrets
 
 
 
-### 三、配置L2TP（xl2tpd）
+## 配置L2TP（xl2tpd）
 
 **1. 修改`/etc/xl2tpd/xl2tpd.conf`**
 
@@ -125,7 +125,7 @@ defaultroute    # 为客户端分发默认网关
 ```
 
 
-### 四、配置用户认证
+## 配置用户认证
 
 ```bash
 vim /etc/ppp/chap-secrets
@@ -142,7 +142,7 @@ chmod 600 /etc/ppp/chap-secrets
 
 
 
-### 五、启动服务
+## 启动服务
 
 ```bash
 systemctl enable --now ipsec xl2tpd
@@ -152,7 +152,7 @@ systemctl enable --now ipsec xl2tpd
 
 
 
-### 六、客户端连接参数
+## 客户端连接参数
 
 - 服务器IP：服务器IP
 - 预共享密钥：YOUR_KEY
@@ -165,7 +165,7 @@ systemctl enable --now ipsec xl2tpd
 
 
 
-### 七、测试连接
+## 测试连接
 **1. Windows 10/11 配置步骤**
 
 **打开VPN设置**
@@ -275,7 +275,7 @@ ping 8.8.8.8      # 测试DNS
 
 
 
-### 八、常见问题排查
+## 常见问题排查
 
 **1. 检查服务状态：**
 
