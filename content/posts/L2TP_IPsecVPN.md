@@ -147,7 +147,9 @@ chmod 600 /etc/ppp/chap-secrets
 ```bash
 systemctl enable --now ipsec xl2tpd
 ```
-
+```bash
+systemctl status ipsec xl2tpd
+```
 >  注意：实际部署时请替换所有`<服务器IP>`和`YOUR_KEY`为真实值，建议使用更复杂的密码组合。生产环境建议启用firewalld并仅开放必要端口（UDP 500/4500/1701）。
 
 
@@ -303,9 +305,7 @@ for iface in /proc/sys/net/ipv4/conf/*/accept_redirects; do
 done
 ```
 
-```bash
-systemctl status ipsec xl2tpd
-```
+
 
 **2. 查看日志：**
 
