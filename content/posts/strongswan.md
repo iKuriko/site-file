@@ -1,5 +1,5 @@
 ---
-title: "Strongswan VPN"
+title: "StrongswanVPN"
 date: 2024-12-20T17:51:41+08:00
 draft: true
 tags:
