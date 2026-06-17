@@ -9,7 +9,7 @@ description: CentOS Linux 化身 AP 接入
 
 
 
-# 安装软件包
+## 安装软件包
 
 查看是否有无线网卡
 
@@ -43,7 +43,7 @@ modprobe rtl8188ee
 
 
 
-# 配置服务
+## 配置服务
 
 开启WiFi
 
@@ -105,7 +105,7 @@ nmtui    #选择freewifi添加wifi密码
 
 
 
-# 启动热点
+## 启动热点
 
 ```bash
 nmcli connection up freewifi
@@ -113,7 +113,7 @@ nmcli connection up freewifi
 
 
 
-# 驱动问题解决
+## 驱动问题解决
 
 更新驱动
 
