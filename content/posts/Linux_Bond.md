@@ -348,11 +348,43 @@ teamnl team0 ports
 
 ## Team 配置案例(主备）
 
-主备切换，使用目标地址`arp`检测进行主备切换，无需关注链路UP/DOWN状态
+主备切换，使用目标地址`arpping`检测进行主备切换，无需关注链路UP/DOWN状态
 
 ```bash
 nmcli con add type team con-name team0 ifname team0 config '{"runner": {"name": "activebackup"}, "link_watch": {"name": "arp_ping", "interval": 100, "missed_max": 3, "target_host": "10.255.255.2"}}' 
 ```
 
 其余配置和负载模式配置一致
+
+```bash
+#teamdctl team1 state
+setup:
+  runner: activebackup
+ports:
+  enp2s0
+    link watches:
+      link summary: up
+      instance[link_watch_0]:
+        name: arp_ping
+        link: up
+        down count: 1
+  enp4s0
+    link watches:
+      link summary: down
+      instance[link_watch_0]:
+        name: arp_ping
+        link: down
+        down count: 0
+```
+
+```bash
+#tcpdump -i enp2s0 -nn arp
+dropped privs to tcpdump
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on enp2s0, link-type EN10MB (Ethernet), capture size 262144 bytes
+17:07:09.493319 ARP, Request who-has 10.255.255.6 (ff:ff:ff:ff:ff:ff) tell 0.0.0.0, length 28
+17:07:09.493390 ARP, Reply 10.255.255.6 is-at 00:09:0f:09:00:0c, length 46
+17:07:09.593314 ARP, Request who-has 10.255.255.6 (ff:ff:ff:ff:ff:ff) tell 0.0.0.0, length 28
+17:07:09.593381 ARP, Reply 10.255.255.6 is-at 00:09:0f:09:00:0c, length 46
+```
 
