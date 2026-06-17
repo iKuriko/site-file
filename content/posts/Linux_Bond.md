@@ -1,5 +1,5 @@
 ---
-title: "Linux Link Aggregation"
+title: "Linux Bond&Team"
 date: 2023-10-31T11:06:02+08:00
 draft: true
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "Deepseek model deploy"
+title: "Deepseek Model Deploy"
 date: 2026-04-10T16:57:02+08:00
 draft: true
 tags:
