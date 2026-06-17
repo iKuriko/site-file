@@ -1,6 +1,6 @@
 ---
 title: "Rpmdb open failed"
-date: 2026-06-17T16:42:54+08:00
+date: 2026-02-12T16:42:54+08:00
 draft: true
 tags:
   - Other
