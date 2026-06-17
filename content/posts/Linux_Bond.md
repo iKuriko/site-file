@@ -4,12 +4,8 @@ date: 2023-10-31T11:06:02+08:00
 draft: true
 tags:
   - Tools
-description: Linux通过bond&Team，可以很容易实现网口冗余，负载均衡，实现高可用高可靠的目的
+description: Linux通过bond&Team 可以很容易实现网口冗余，负载均衡，实现高可用高可靠的目的
 ---
-
-
-
-
 
 
 # 链路聚合实现方式

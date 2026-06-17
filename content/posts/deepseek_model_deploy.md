@@ -4,7 +4,6 @@ date: 2026-04-10T16:57:02+08:00
 draft: true
 tags:
   - Tools
-draft: true
 description: 在 GB200 服务器上拉起 deepseek 大模型
 ---
 
