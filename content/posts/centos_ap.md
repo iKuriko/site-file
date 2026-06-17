@@ -1,5 +1,5 @@
 ---
-title: "Centos WIFI"
+title: "CentOS8 WIFI"
 date: 2026-06-17T16:02:06+08:00
 draft: true
 tags:
