@@ -4,7 +4,7 @@ date: 2026-06-17T16:02:06+08:00
 draft: true
 tags:
   - Linux services
-description: CentOS Linux 化身 AP 接入
+description: Linux 服务器化身 WIFI Server
 ---
 
 
