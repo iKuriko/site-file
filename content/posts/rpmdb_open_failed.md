@@ -4,7 +4,7 @@ date: 2026-02-12T16:42:54+08:00
 draft: true
 tags:
   - Other
-description: rpm 被玩坏时，报错 Error: Error: rpmdb open failed 问题解决
+description: rpm 被玩坏时，报错 Error: rpmdb open failed 问题解决
 ---
 
 
