@@ -1,5 +1,5 @@
 ---
-title: "Linux Troubleshooting Commands"
+title: "Linux Troubleshooting"
 date: 2021-11-16T11:01:07+08:00
 draft: true
 tags:
@@ -272,7 +272,7 @@ find / ! -name "*.txt"
 
 
 
-[^1]:sort 命令将文本文件内容加以排序,可针对文本文件的内容，以行为单位来排序。-n 参数依照数值的大小排序。uniq 命令用于检查及删除文本文件中重复出现的行列，一般与 sort 命令结合使用。
+[^1]: sort 命令将文本文件内容加以排序,可针对文本文件的内容，以行为单位来排序。-n 参数依照数值的大小排序。uniq 命令用于检查及删除文本文件中重复出现的行列，一般与 sort 命令结合使用。
 [^2]: awk语法： awk [options] ‘pattern{action}’ file    #awk是一种编程语言，用于对文本和数据进行处理的
 
  
