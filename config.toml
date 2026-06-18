@@ -248,11 +248,6 @@ uglyURLs = false
         name = "Mail"
         weight = 2
         pre = "external"
-    [[menu.socials]]
-        url = "https://twitter.com/aku1ko"
-        name = "Twitter"
-        weight = 3
-        pre = "external"
 
 
 ##########################################
@@ -373,7 +368,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "akur1ko"
+    # siteTwitter = "akur1ko"
     # 说明：用于 Twitter Cards
 
 
