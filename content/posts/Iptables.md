@@ -410,18 +410,6 @@ iptables -t nat -A POSTROUTING -o em1 -j SNAT --to-source 192.168.2.1-192.168.2.
 
 
 
-## 标签路由
-
-
-
-
-
-
-
-
-
-
-
 ## 实用案例
 
 ### 个人主机
