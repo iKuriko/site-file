@@ -3,7 +3,7 @@ title: "KVM"
 date: 2021-11-10T16:36:54+08:00
 draft: true
 tags:
-  - Linux services
+  - Tools
 description: KVM是x86架构且硬件支持虚拟化技术（如 intel VT 或 AMD-V）的 Linux 虚拟化解决方案。
 ---
 
@@ -593,5 +593,5 @@ virsh edit test1    #编辑虚拟机配置文件，在<interface>加入<virtualp
 
 [^1]: Hypervisor，又称"虚拟机监视器"（virtual machine monitor，缩写为 VMM），是用来建立与执行[虚拟机器](https://baike.baidu.com/item/虚拟机器)的软件、固件或硬件。
 [^2]: KVM 是基于 x86 虚拟化扩展(Intel VT 或者 AMD-V) 技术的虚拟机软件，所以查看 CPU 是否支持 VT 技术，就可以判断是否支持KVM。有返回结果，如果结果中有vmx（Intel）或svm(AMD)字样，就说明CPU的支持的。
-[^3]:为了方便管理KVM网络，删除自带的默认网络，默认的网络模式为NAT模式 
-[^4]:  如果是中文的话某些版本可能会报错或乱码。在CentOS 7/8 中修改 /etc/locale.conf
+[^3]: 为了方便管理KVM网络，删除自带的默认网络，默认的网络模式为NAT模式 
+[^4]: 如果是中文的话某些版本可能会报错或乱码。在CentOS 7/8 中修改 /etc/locale.conf

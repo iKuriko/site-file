@@ -1,10 +1,10 @@
 ---
-title: "CentOS8 WIFI"
+title: "CentOS8 AP"
 date: 2026-06-17T16:02:06+08:00
 draft: true
 tags:
-  - Linux services
-description: Linux 服务器化身 WIFI Server
+  - Services
+description: Linux 化身 WIFI 路由器
 ---
 
 

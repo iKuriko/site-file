@@ -4,7 +4,7 @@ date: 2025-02-18T09:36:22+08:00
 draft: true
 tags:
   - VPN
-  - Linux services
+  - Services
 description: Linux 下的 L2TP（Layer 2 Tunneling Protocol）通常与 IPsec 结合使用以提供加密和安全性。
 ---
 

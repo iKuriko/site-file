@@ -3,7 +3,7 @@ title: "Deepseek Model Deploy"
 date: 2026-04-10T16:57:02+08:00
 draft: true
 tags:
-  - Tools
+  - GPUOps
 description: 在 GB200 服务器上拉起 deepseek 大模型
 ---
 

@@ -3,7 +3,7 @@ title: "Rsyslog"
 date: 2026-05-19T10:06:57+08:00
 draft: true
 tags:
-  - Linux services
+  - Services
 description: 收集本地日志上传至中心服务器或作为中心日志服务器接收远程日志
 ---
 

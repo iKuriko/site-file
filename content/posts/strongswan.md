@@ -3,7 +3,7 @@ title: "StrongSwanVPN"
 date: 2024-12-20T17:51:41+08:00
 draft: true
 tags:
-  - Linux services
+  - Services
   - VPN
 description: Linux 下的 IKEv2/IPSEC VPN
 ---

@@ -1,9 +1,9 @@
 ---
-title: "CentOS8 PPPoE 4G"
+title: "CentOS8 PPPoE Server 4G"
 date: 2022-03-09T11:44:50+08:00
 draft: true
 tags:
-  - Linux services
+  - Services
   - PPPOE
 description: 使用Huawei ME906s 4G模块PPPE拨号上网
 ---
