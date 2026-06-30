@@ -4,6 +4,7 @@ date: 2025-01-17T16:53:19+08:00
 draft: true
 tags:
   - Tools
+  - Services
 description: FRRouting 是 Linux 上一款开源的路由模拟器工具，它能使你的 Linux 主机变身为思科路由器
 ---
 

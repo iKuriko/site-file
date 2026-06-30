@@ -4,6 +4,7 @@ date: 2022-12-30T14:22:06+08:00
 draft: true
 tags:
   - Tools
+  - Services
 description: Firewalld是基于区域(zone)的防火墙规则管理工具
 ---
 
