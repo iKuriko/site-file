@@ -410,6 +410,37 @@ iptables -t nat -A POSTROUTING -o em1 -j SNAT --to-source 192.168.2.1-192.168.2.
 
 
 
+## 标签路由
+
+### 规则案例：从哪儿来的从哪儿回
+
+从这个IP来的，打上1001的标签
+
+```bash
+iptables -t mangle -A PREROUTING -s 192.168.100.2 -j MARK --set-xmark 0x1001
+```
+
+连接追踪保存标签
+
+```bash
+iptables -t mangle -A PREROUTING -s 192.168.100.2 -j CONNMARK --save-mark --nfmask 0xffffffff --ctmask 0xffffffff
+```
+
+连接追踪还原标签
+
+```bash
+iptables -t mangle -A PREROUTING -s 192.168.100.2 --restore-mark --nfmask 0xffffffff --ctmask 0xffffffff
+```
+
+根据标签匹配策略路由
+
+```bash
+ip ru add pref 3000 from all fwmark 0x1001 lookup 3000
+ip ro add tab 3000 default via 192.168.100.1
+```
+
+
+
 ## 实用案例
 
 ### 个人主机
