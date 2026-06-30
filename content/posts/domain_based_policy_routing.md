@@ -214,7 +214,7 @@ ip -6 ru add pref 20000 from all fwmark 0xa1004 lookup 1004
 ``` bash
 ip -6 ro add tab 1004 default via <wan2 gateway>
 ```
-### 添加静态目标ipv6至ipset
+### 添加静态目标IPv6至ipset
 
 ```bash
 ipset add static_ipv6 2002::1/128
@@ -228,7 +228,7 @@ do
 	ipset add static_ipv6 $i 
 done
 ```
-### 非本地dns解析
+### 非本地解析
 
 如果某些域名想要使用非本地dns解析，可以添加到dnsmasq，然后防火墙放行目标`dns server`
 
