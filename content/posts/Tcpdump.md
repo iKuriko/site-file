@@ -151,7 +151,7 @@ tcpdump -i enp1s0 -Q in
 
 极尽详细地显示该网卡的每一个 ICMP 包的完整二进制内容和协议字段，且所有地址都以数字形式展示 
 
-```
+```bash
 tcpdump -i enp1s0 icmp -XX -vvv -n 
 ```
 
