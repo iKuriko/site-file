@@ -15,7 +15,7 @@ Linux中的PTP使用 **linuxptp** 套件实现（`ptp4l` + `phc2sys`）
 
 
 
-
+## 环境准备
 
 安装 linuxptp
 
@@ -23,15 +23,11 @@ Linux中的PTP使用 **linuxptp** 套件实现（`ptp4l` + `phc2sys`）
 yum install linuxptp -y
 ```
 
-
-
 关闭其他时间同步服务防止干扰
 
 ```bash
 systemctl stop chronyd ntpd
 ```
-
-
 
 关闭防火墙或允许udp 319、320端口通过
 
@@ -39,8 +35,6 @@ systemctl stop chronyd ntpd
 firewall-cmd --add-port=319/udp --add-port=320/udp --permanent
 firewall-cmd --reload
 ```
-
-
 
 查看物理网卡支持硬件时间戳
 
@@ -50,7 +44,7 @@ ethtool -T ens33 | grep hardware-transmit
 
 
 
-启动主节点时钟
+## 启动主节点时钟
 
 ```bash
 cat /etc/ptp4l-master.conf 
@@ -77,9 +71,13 @@ masterOnly              1		#强制仅作为主时钟。
 ptp4l -f /etc/ptp4l-master.conf -i ens33 -m -H
 ```
 
+实时同步硬件时钟到本地时间
 
+```bash
+phc2sys -s /dev/ptp1 -c CLOCK_REALTIME -m -O 0 -n 0 
+```
+## 启动从节点时钟
 
-启动从节点时钟
 ```bash
 cat /etc/ptp4l-slave.conf 
 
@@ -158,9 +156,13 @@ awk '{
 }' max_ns.txt
 ```
 
+实时同步硬件时钟到本地时间
 
+```bash
+phc2sys -s /dev/ptp6 -c CLOCK_REALTIME -m -O 0 -n 0 
+```
 
-测试结果统计
+## 验证同步结果
 
 | 指标   | RMS 偏差 (ns) | Max 峰值偏差 (ns) |
 | ------ | ------------- | ----------------- |
