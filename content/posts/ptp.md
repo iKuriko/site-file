@@ -36,7 +36,7 @@ firewall-cmd --add-port=319/udp --add-port=320/udp --permanent
 firewall-cmd --reload
 ```
 
-查看物理网卡支持硬件时间戳
+查看物理网卡是否支持硬件时间戳
 
 ```bash
 ethtool -T ens33 | grep hardware-transmit
@@ -108,7 +108,11 @@ OFFSET_FILE="/tmp/ptp_rms_$(date +%Y%m%d_%H%M%S).log"
 ```bash
 ptp4l -f /etc/ptp4l-slave.conf -i ens33 -m -H 2>&1 | stdbuf -oL grep "rms" >> "$OFFSET_FILE"
 ```
+实时同步硬件时钟到本地时间
 
+```bash
+phc2sys -s /dev/ptp6 -c CLOCK_REALTIME -m -O 0 -n 0 
+```
 采集所有 rms 和 max 数值，分别统计均值、标准差、最小值和最大值，以评估同步精度与稳定性。
 
 拿出rms偏差数据
@@ -154,12 +158,6 @@ awk '{
     print "Max最小值:", min, "ns"
     print "Max最大值:", max_val, "ns"
 }' max_ns.txt
-```
-
-实时同步硬件时钟到本地时间
-
-```bash
-phc2sys -s /dev/ptp6 -c CLOCK_REALTIME -m -O 0 -n 0 
 ```
 
 ## 验证同步结果
