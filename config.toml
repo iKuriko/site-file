@@ -207,13 +207,13 @@ uglyURLs = false
 #        weight = 2
 #        pre = "internal"
 #        post = "archive"
-#    [[menu.main]]
-#        url = "/archives/"
-#        name = "归档"
-#        weight = 3
-#        pre = "internal"
-#        post = "archive"
-#        identifier = "archive"
+    [[menu.main]]
+        url = "/archives/"
+        name = "归档"
+        weight = 3
+        pre = "internal"
+        post = "archive"
+        identifier = "archive"
     [[menu.main]]
         url = "/tags/"
         name = "Tag"
@@ -1250,11 +1250,11 @@ uglyURLs = false
     displaySiteCreatedYear = true
 
     # 年份与作者之间的图标，留空（""）则无
-    iconBetweenYearAndAuthor = "heart"
+    iconBetweenYearAndAuthor = "moon"
     # 图标颜色
-    iconColor = "#f06292"
+    iconColor = ""
     # 是否开启图标的跳动效果
-    iconAnimation = true
+    iconAnimation = false
 
     # 是否显示 Hugo 和 MemE 的链接
     displayPoweredBy = true
@@ -1369,7 +1369,7 @@ uglyURLs = false
 
     # 说明：需要开启 `SearchIndex` 的输出
 
-    enableLunrSearch = false
+    enableLunrSearch = true
     # 说明：https://lunrjs.com/
 
 
@@ -1382,9 +1382,9 @@ uglyURLs = false
 
     enableAlgoliaSearch = false
 
-    algoliaAppId = "X6T48HHWDY"
-    algoliaApiKey = "053d902a5fe40c9a8d5a92c68eaddcb9"
-    algoliaIndexName = "ikuriko"
+    algoliaAppId = ""
+    algoliaApiKey = ""
+    algoliaIndexName = ""
     # 说明：https://www.algolia.com/
 
 
