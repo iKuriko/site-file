@@ -8,11 +8,15 @@ title: "About"
 
 　　
 
-记录我的学习笔记 
+这里主要记录我在**Linux运维、网络架构与VPN实战**中的学习笔记与思考沉淀。
 
-基于[Hugo](https://github.com/gohugoio/hugo)构建， [MemE](https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-cn.md) 极简风
+　　
 
-为了页面简洁，关闭评论
+本站基于 **Hugo** 构建，使用 **MemE** 极简风主题。
+
+　　
+
+为了保持页面简洁和阅读的纯粹感，我关闭了评论功能。如果你有任何想法或问题，欢迎通过邮件与我交流。
 
 
 
