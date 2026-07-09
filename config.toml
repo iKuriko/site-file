@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://ikuriko.github.io"
-title = "ikuriko's Tech Blog | 学海无涯，行成于思"
+title = "Kuriko's Tech Blog | 学海无涯 行成于思"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -99,7 +99,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "ikuriko"
+    name = "kuriko"
     # 邮箱
     email = "ikuriko@qq.com"
     # 座右铭或简介
