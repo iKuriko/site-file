@@ -1128,14 +1128,14 @@ uglyURLs = false
     # 文章分享
 
     # 是否开启
-    enablePostShare = true
+    enablePostShare = false
 
     # 是否显示（全局设置）
-    displayPostShare = true
+    displayPostShare = false
     # 说明：文章的 Front Matter 中的 `share`
     #      的优先级高于此处
 
-    displayShareOnText = true
+    displayShareOnText = false
 
     shareOnTwitter = false
     shareOnFacebook = false
@@ -1239,7 +1239,7 @@ uglyURLs = false
     # 是否在首页显示
     displayFooterInHome = true
 
-    displayCopyleftSymbol = true
+    displayCopyleftSymbol = false
     # 是否显示版权符号（©）
     displayCopyrightSymbol = true
 

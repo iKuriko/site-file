@@ -4,7 +4,7 @@ title: "About"
 
 　　
 
-> Welcome to ikuriko's Tech Blog  
+欢迎来到 ikuriko 的技术笔记。 
 
 　　
 
