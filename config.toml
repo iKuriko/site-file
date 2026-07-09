@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://ikuriko.github.io"
-title = "ikuriko"
+title = "ikuriko's Tech Blog | 学海无涯，行成于思"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -103,13 +103,12 @@ uglyURLs = false
     # 邮箱
     email = "ikuriko@qq.com"
     # 座右铭或简介
-    motto = "Mosi Meta"
+    motto = "摔倒了先躺会儿"
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
     website = "https://ikuriko.github.io"
-    # 推特
-    # twitter = "akur1ko"
+
 
 # 相关文章
 [related]
@@ -209,7 +208,7 @@ uglyURLs = false
 #        post = "archive"
 #    [[menu.main]]
 #        url = "/archives/"
-#        name = "归档"
+#        name = "Archive"
 #        weight = 3
 #        pre = "internal"
 #        post = "archive"
@@ -331,8 +330,6 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    #homePoetry = ["大丘丘病了","二丘丘瞧","三丘丘采药","四丘丘嗷~","五丘丘死了","六丘丘抬","七丘丘挖坑","八丘丘埋~"]
-    #homePoetry = ["太阳出来我晒太阳~","月亮出来我晒月亮咯~"]
     homePoetry = ["业精于勤，","荒于嬉；","行成于思，","毁于随。"]
     #homePoetry = ["你总喜欢把事情拖到第二天","有一天","你会有很多事情要做","你的余生都不够用"]
     # 底部链接的内间距，单位：em
@@ -359,7 +356,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "lazy"
+    siteDescription = "分享Linux运维、网络架构与VPN实战中的思考与笔记"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -1064,7 +1061,7 @@ uglyURLs = false
     enablePostCopyright = false
 
     # 是否显示（全局设置）
-    displayPostCopyright = true
+    displayPostCopyright = false
     # 说明：文章的 Front Matter 中的 `displayCopyright`
     #      的优先级高于此处
 
@@ -1073,7 +1070,7 @@ uglyURLs = false
     # 文章更新徽章
 
     # 是否开启
-    enablePostUpdatedBadge = false
+    enablePostUpdatedBadge = true
 
     # 是否显示（全局设置）
     displayUpdatedBadge = true
@@ -1090,10 +1087,10 @@ uglyURLs = false
     # 文章的 Git 版本信息
 
     # 是否开启
-    enablePostGitInfo = false
+    enablePostGitInfo = true
 
     # 是否显示（全局设置）
-    displayPostGitInfo = false
+    displayPostGitInfo = true
     # 说明：文章的 Front Matter 中的 `gitinfo`
     #      的优先级高于此处
 
@@ -1113,14 +1110,14 @@ uglyURLs = false
     msgIcon = "info"
 
     # 是否显示反馈链接
-    displayFeedback = false
+    displayFeedback = true
     # 反馈链接的图标
     feedbackIcon = "question"
     # 反馈链接的文本
     feedbackText = "Feedback"
 
     # 是否显示编辑链接
-    displayEditLink = false
+    displayEditLink = true
     # 编辑链接的图标
     editIcon = "edit"
     # 编辑链接的文本
@@ -1131,14 +1128,14 @@ uglyURLs = false
     # 文章分享
 
     # 是否开启
-    enablePostShare = false
+    enablePostShare = true
 
     # 是否显示（全局设置）
-    displayPostShare = false
+    displayPostShare = true
     # 说明：文章的 Front Matter 中的 `share`
     #      的优先级高于此处
 
-    displayShareOnText = false
+    displayShareOnText = true
 
     shareOnTwitter = false
     shareOnFacebook = false
@@ -1242,7 +1239,7 @@ uglyURLs = false
     # 是否在首页显示
     displayFooterInHome = true
 
-    displayCopyleftSymbol = false
+    displayCopyleftSymbol = true
     # 是否显示版权符号（©）
     displayCopyrightSymbol = true
 
@@ -1252,7 +1249,7 @@ uglyURLs = false
     # 年份与作者之间的图标，留空（""）则无
     iconBetweenYearAndAuthor = "moon"
     # 图标颜色
-    iconColor = ""
+    iconColor = "yellow"
     # 是否开启图标的跳动效果
     iconAnimation = false
 
@@ -1289,7 +1286,7 @@ uglyURLs = false
     hideLangToggleInHome = false
 
     # 是否自动隐藏多语言按钮
-    autoHideLangToggle = true
+    autoHideLangToggle = false
     # 说明：即仅当该文章有相应的翻译版本时才显
     #      示按钮
 
