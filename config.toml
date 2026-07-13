@@ -99,7 +99,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "kuriko"
+    name = "ikuriko"
     # 邮箱
     email = "ikuriko@qq.com"
     # 座右铭或简介
@@ -1249,7 +1249,7 @@ uglyURLs = false
     # 年份与作者之间的图标，留空（""）则无
     iconBetweenYearAndAuthor = "moon"
     # 图标颜色
-    iconColor = "yellow"
+    iconColor = "white"
     # 是否开启图标的跳动效果
     iconAnimation = false
 
