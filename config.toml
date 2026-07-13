@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://ikuriko.github.io"
-title = "Kuriko's Tech Blog | 学海无涯 行成于思"
+title = "iKuriko's Tech Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
