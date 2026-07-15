@@ -1,5 +1,5 @@
 ---
-title: "Linux Bond&Team"
+title: "网卡 Bond/Team 链路聚合"
 date: 2023-10-31T11:06:02+08:00
 draft: true
 tags:

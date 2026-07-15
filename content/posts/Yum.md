@@ -1,5 +1,5 @@
 ---
-title: "Yum"
+title: "Yum 软件包管理与使用"
 date: 2022-03-30T14:48:31+08:00
 draft: true
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "CetnOS7 PPPoE Server"
+title: "CentOS 7 PPPoE 服务器搭建"
 date: 2022-12-30T10:29:28+08:00
 draft: true
 tags:

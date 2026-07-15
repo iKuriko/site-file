@@ -1,5 +1,5 @@
 ---
-title: "Rpmdb open failed"
+title: "修复 RPM 数据库损坏错误"
 date: 2026-02-12T16:42:54+08:00
 draft: true
 tags:

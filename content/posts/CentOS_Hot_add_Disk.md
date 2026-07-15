@@ -1,5 +1,5 @@
 ---
-title: "CentOS Hot addition Disk"
+title: "CentOS 磁盘热添加"
 date: 2021-11-01T17:41:41+08:00
 draft: true
 tags:

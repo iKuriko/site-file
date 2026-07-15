@@ -1,5 +1,5 @@
 ---
-title: "Dig"
+title: "Dig 域名解析排查"
 date: 2023-11-07T16:21:11+08:00
 draft: true
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "CentOS7 SqlServer"
+title: "CentOS 7 安装 SQL Server"
 date: 2021-11-18T11:56:06+08:00
 draft: true
 tags:

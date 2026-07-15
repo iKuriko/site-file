@@ -1,5 +1,5 @@
 ---
-title: "PTP"
+title: "PTP 精确时间同步"
 date: 2026-07-07T14:09:54+08:00
 draft: true
 tags:

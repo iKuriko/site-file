@@ -1,5 +1,5 @@
 ---
-title: "CentOS8 NTP"
+title: "CentOS 8 NTP 时间同步"
 date: 2021-12-24T14:28:17+08:00
 draft: true
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "SSH noPassword"
+title: "SSH 免密登录配置"
 date: 2022-04-15T17:27:16+08:00
 draft: true
 tags:

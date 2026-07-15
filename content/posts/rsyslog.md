@@ -1,5 +1,5 @@
 ---
-title: "Rsyslog"
+title: "Rsyslog 日志集中收集配置"
 date: 2026-05-19T10:06:57+08:00
 draft: true
 tags:

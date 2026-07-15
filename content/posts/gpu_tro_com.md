@@ -1,5 +1,5 @@
 ---
-title: "GPU Troubleshooting"
+title: "GPU 常见故障排查"
 date: 2026-06-18T11:11:19+08:00
 draft: true
 tags:

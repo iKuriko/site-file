@@ -1,5 +1,5 @@
 ---
-title: "Linux Troubleshooting"
+title: "Linux 系统常见故障排查"
 date: 2021-11-16T11:01:07+08:00
 draft: true
 tags:

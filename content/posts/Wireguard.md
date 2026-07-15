@@ -1,5 +1,5 @@
 ---
-title: "WireGuard"
+title: "WireGuard VPN 搭建"
 date: 2021-12-31T10:06:44+08:00
 draft: true
 tags:

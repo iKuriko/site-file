@@ -1,5 +1,5 @@
 ---
-title: "L2TP/IPsecVPN"
+title: "L2TP/IPsec VPN 服务搭建"
 date: 2025-02-18T09:36:22+08:00
 draft: true
 tags:

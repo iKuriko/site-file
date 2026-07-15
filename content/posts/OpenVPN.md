@@ -1,5 +1,5 @@
 ---
-title: "OpenVPN"
+title: "OpenVPN 服务搭建"
 date: 2022-03-18T11:27:46+08:00
 draft: true
 tags:

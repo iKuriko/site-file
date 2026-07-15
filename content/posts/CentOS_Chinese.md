@@ -1,5 +1,5 @@
 ---
-title: "CentOS Chinese"
+title: "CentOS 中文环境配置"
 date: 2021-11-05T10:34:28+08:00
 draft: true
 tags:

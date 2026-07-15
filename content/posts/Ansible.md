@@ -1,5 +1,5 @@
 ---
-title: "Ansible"
+title: "Ansible 自动化部署与 Playbook 示例"
 date: 2021-10-29T11:50:51+08:00
 draft: true
 tags:

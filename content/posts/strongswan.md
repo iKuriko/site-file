@@ -1,5 +1,5 @@
 ---
-title: "StrongSwanVPN"
+title: "StrongSwan IPsec VPN 搭建"
 date: 2024-12-20T17:51:41+08:00
 draft: true
 tags:

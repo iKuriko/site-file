@@ -1,5 +1,5 @@
 ---
-title: "CentOS8 PPPoE 4G"
+title: "CentOS 8 4G模块PPPoE拨号"
 date: 2022-03-09T11:44:50+08:00
 draft: true
 tags:

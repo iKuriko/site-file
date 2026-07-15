@@ -1,5 +1,5 @@
 ---
-title: "Network NameSpace"
+title: "网络命名空间 (Netns) 配置"
 date: 2022-02-22T14:50:30+08:00
 draft: true
 tags:

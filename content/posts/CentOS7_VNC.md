@@ -1,5 +1,5 @@
 ---
-title: "CentOS7 VNC"
+title: "CentOS 7 VNC 远程桌面"
 date: 2021-11-03T17:38:40+08:00
 draft: true
 tags:

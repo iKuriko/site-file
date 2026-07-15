@@ -1,5 +1,5 @@
 ---
-title: "Firewalld"
+title: "Firewalld 防火墙策略配置"
 date: 2022-12-30T14:22:06+08:00
 draft: true
 tags:
