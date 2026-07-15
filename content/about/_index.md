@@ -1,5 +1,5 @@
 ---
-title: "关于我"
+title: "About"
 ---
 
 [学海无涯 行成于思](https://ikuriko.github.io/) 欢迎来到 iKuriko 的技术笔记。 
