@@ -293,7 +293,7 @@ TTL=255
 ### 二层GRE
 
 ```bash
-ip link add gretap01 mode gretap remote 192.168.2.215 local 192.168.2.180 ttl 255    //创建ip隧道，类型为二层gretap，名称为gretap01，远程IP地址2.22，本地IP地址2.23
+ip link add gretap01 type gretap remote 192.168.2.215 local 192.168.2.180 ttl 255    //创建ip隧道，类型为二层gretap，名称为gretap01，远程IP地址2.22，本地IP地址2.23
 ```
 
 ```bash
@@ -311,7 +311,7 @@ ps：
 如果源目地址相同，想要创建多条gre隧道，需要添加key值的选项
 
 ```bash
-ip link add gretap01 mode gretap remote 192.168.2.215 local 192.168.2.180 ttl 255 key 1
+ip link add gretap01 type gretap remote 192.168.2.215 local 192.168.2.180 ttl 255 key 1
 ```
 
 删除隧道
