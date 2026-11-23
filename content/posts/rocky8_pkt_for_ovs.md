@@ -1,5 +1,5 @@
 ---
-title: "Rocky Linux 8.10 源码编译打包 Open vSwitch 3.7.1 RPM"
+title: "Rocky Linux 8.10 打包 Open vSwitch 3.7.1"
 date: 2026-11-23T10:15:22+08:00
 draft: true
 tags:
@@ -7,7 +7,7 @@ tags:
 description: 在 Rocky Linux 8.10 上构建 OpenvSwitch 软件包
 ---
 
-# 实战：Rocky Linux 8.10 源码编译打包 Open vSwitch 3.7.1 RPM
+# 实战：Rocky Linux 8.10 打包 Open vSwitch 3.7.1 RPM
 
 > **环境元数据**
 >
