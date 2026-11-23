@@ -3,8 +3,7 @@ title: "Iptables 防火墙与 NAT"
 date: 2022-03-28T11:23:42+08:00
 draft: true
 tags:
-  - Tools
-  - Services
+  - NetSec
 description: netfilter/iptables 是 Linux 内核集成的IP信息包过滤系统，有利于在 Linux 系统上更好的控制IP信息包过滤和防火墙配置
 ---
 

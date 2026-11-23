@@ -3,8 +3,7 @@ title: "StrongSwan IPsec VPN 搭建"
 date: 2024-12-20T17:51:41+08:00
 draft: true
 tags:
-  - Services
-  - VPN
+  - NetSec
 description: Linux 下的 IKEv2/IPSEC VPN
 ---
 

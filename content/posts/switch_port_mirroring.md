@@ -3,7 +3,7 @@ title: "交换机端口镜像配置"
 date: 2026-03-10T17:38:19+08:00
 draft: true
 tags:
-  - Other
+  - Networking
 description: 在交换机上将目标端口的流量复制到观察端口，以达到不影响业务的情况下也能进行数据包分析
 ---
 

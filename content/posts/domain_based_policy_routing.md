@@ -3,7 +3,7 @@ title: "基于域名分流的策略路由配置"
 date: 2026-06-30T14:35:30+08:00
 draft: true
 tags:
-  - Tools
+  - Networking
 description: 基于域名的策略路由是将 dnsmasq（DNS 解析与 ipset 填充）、ipset（IP 集合管理）、iptables（流量标记）和 iproute2（策略路由）这四个成熟的组件创造性地组合在一起的经典范例
 ---
 

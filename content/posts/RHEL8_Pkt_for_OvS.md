@@ -3,7 +3,7 @@ title: "RHEL 8 打包 Open vSwitch"
 date: 2021-11-23T16:25:50+08:00
 draft: true
 tags:
-  - OpenvSwitch
+  - Networking
 description: 在 CentOS8 上构建 OpenvSwitch 软件包
 ---
 

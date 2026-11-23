@@ -3,7 +3,8 @@ title: "PTP 精确时间同步"
 date: 2026-07-07T14:09:54+08:00
 draft: true
 tags:
-  - Services
+  - LinuxOps
+  - Networking
 description: PTP，Precision Time Protocol（精确时间协议）是在计算机网络中实现亚微秒级甚至纳秒级高精度时钟同步的协议，协议编号为IEEE 1588
 ---
 

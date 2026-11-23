@@ -3,7 +3,7 @@ title: "TC 流量限速与整形"
 date: 2025-01-17T16:58:12+08:00
 draft: true
 tags:
-  - Tools
+  - Networking
 description: 使用 wondershaper 工具对 Linux 下的网络接口限速
 ---
 

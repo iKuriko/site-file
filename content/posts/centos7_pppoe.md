@@ -3,8 +3,7 @@ title: "CentOS 7 PPPoE 服务器搭建"
 date: 2022-12-30T10:29:28+08:00
 draft: true
 tags:
-  - Services
-  - PPPOE
+  - Networking
 description: 在CentOS7上搭建PPPoE Server
 ---
 

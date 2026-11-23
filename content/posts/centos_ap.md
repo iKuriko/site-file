@@ -3,7 +3,7 @@ title: "CentOS 8 无线AP搭建"
 date: 2026-06-17T16:02:06+08:00
 draft: true
 tags:
-  - Services
+  - Networking
 description: Linux 化身 WIFI 路由器
 ---
 

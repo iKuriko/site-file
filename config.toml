@@ -103,7 +103,7 @@ uglyURLs = false
     # 邮箱
     email = "ikuriko@qq.com"
     # 座右铭或简介
-    motto = "摔倒了先躺会儿"
+    motto = ""
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
@@ -122,6 +122,9 @@ uglyURLs = false
         name = "date"
         weight = 10
         pattern = "2006"
+    [[related.indices]]
+        name = "tags"
+        weight = 80
 
 # Atom 文件格式的媒体类型
 [mediaTypes."application/atom+xml"]
@@ -200,6 +203,7 @@ uglyURLs = false
         weight = 2
         pre = "internal"
         post = "archive"
+        identifier = "archive"
 #    [[menu.main]]
 #        url = "/life/"
 #        name = "Life"

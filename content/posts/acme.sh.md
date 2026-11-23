@@ -3,7 +3,7 @@ title: "Acme.sh 阿里云DNS申请 SSL 证书"
 date: 2024-12-16T17:27:49+08:00
 draft: true
 tags:
-  - Tools
+  - NetSec
 description: 使用 acme.sh 为阿里云域名申请免费的 ssl 证书
 ---
 

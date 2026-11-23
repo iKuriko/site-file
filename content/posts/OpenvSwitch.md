@@ -3,7 +3,7 @@ title: "Open vSwitch 虚拟交换机配置"
 date: 2022-10-14T15:50:53+08:00
 draft: true
 tags:
-  - OpenvSwitch
+  - Networking
 description: 虚拟交换机软件,主要用于虚拟机VM环境,支持Xen/XenServer,KVM以及VirtualBox多种虚拟化技术
 ---
 

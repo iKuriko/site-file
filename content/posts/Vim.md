@@ -3,7 +3,7 @@ title: "Vim 编辑命令"
 date: 2021-09-09T16:56:06+08:00
 draft: true
 tags:
-  - Tools
+  - DevNotes
 description: Vim编辑神器的常用快捷命令收集
 ---
 

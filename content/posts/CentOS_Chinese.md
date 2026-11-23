@@ -3,7 +3,7 @@ title: "CentOS 中文环境配置"
 date: 2021-11-05T10:34:28+08:00
 draft: true
 tags:
-  - Other
+  - LinuxOps
 description: 为 CentOS 系统安装中文语言支持
 ---
 

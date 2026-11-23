@@ -3,7 +3,7 @@ title: "Ansible 自动化部署与 Playbook 示例"
 date: 2021-10-29T11:50:51+08:00
 draft: true
 tags:
-  - Tools
+  - LinuxOps
 description: Ansible 是目前运维自动化工具中最简单、容易上手的一款优秀软件，能够用来管理各种资源，批量部署应用程序等。
 ---
 
