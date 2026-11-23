@@ -1,5 +1,5 @@
 ---
-title: "Rocky Linux 8.10 打包 OpenvSwitch 3.7.1"
+title: "Rocky Linux 8.10 打包 OpenvSwitch"
 date: 2026-11-23T10:15:22+08:00
 draft: true
 tags:
