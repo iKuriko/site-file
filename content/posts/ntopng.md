@@ -18,7 +18,7 @@ description: 在 CentOS8 上部署 ntopng ，实现性能网络流量监控与�
 
 ---
 
-## 1. 基础环境与 ntopng 安装
+## 基础环境与 ntopng 安装
 
 安装底层依赖、Redis 及 MaxMind GeoIP 支持：
 
@@ -61,7 +61,7 @@ journalctl -u ntopng -f
 
 ---
 
-## 2. 集成 PF_RING 高性能抓包模块
+## 集成 PF_RING 高性能抓包模块
 
 在大流量场景下，默认的 libpcap 容易出现严重丢包，需集成 PF_RING 绕过部分协议栈开销：
 
@@ -90,11 +90,11 @@ ntopng -h 2>&1 | grep -i "pfring\|PF_RING"
 
 ---
 
-## 3. 网卡 RSS 多队列与中断调优
+## 网卡 RSS 多队列与中断调优
 
 充分利用多核 CPU 分散抓包压力，避免单核软中断（softirq）跑满导致丢包。
 
-### 3.1 开启网卡多队列与 RSS 哈希
+### 开启网卡多队列与 RSS 哈希
 
 ```bash
 # 查看网卡当前与最大支持队列数
@@ -113,7 +113,7 @@ ethtool -N enp3s0 rx-flow-hash udp6 sdfn
 ethtool -G enp3s0 rx 4096 tx 4096
 ```
 
-### 3.2 停用 irqbalance 并手动绑定中断 CPU 亲和性
+### 停用 irqbalance 并手动绑定中断 CPU 亲和性
 
 ```bash
 systemctl stop irqbalance
@@ -129,7 +129,7 @@ echo 4 > /proc/irq/30/smp_affinity   # CPU2
 echo 8 > /proc/irq/31/smp_affinity   # CPU3
 ```
 
-### 3.3 网卡参数持久化脚本与 Systemd 服务
+### 网卡参数持久化脚本与 Systemd 服务
 
 ```bash
 cat > /usr/local/bin/nic-tuning.sh << 'EOF'
@@ -177,7 +177,7 @@ systemctl enable nic-tuning
 
 ---
 
-## 4. 系统内核参数与 Limits 优化
+## 系统内核参数与 Limits 优化
 
 ```bash
 cat >> /etc/sysctl.conf << 'EOF'
@@ -209,7 +209,7 @@ EOF
 
 ---
 
-## 5. 配置 ntopng 启用 PF_RING 并重启
+## 配置 ntopng 启用 PF_RING 并重启
 
 更新 `/etc/ntopng/ntopng.conf`：
 
@@ -236,7 +236,7 @@ journalctl -u ntopng -f | grep -i "pfring\|PF_RING\|interface"
 
 ---
 
-## 6. 性能指标校验与丢包监控
+## 性能指标校验与丢包监控
 
 ```bash
 # 查看 PF_RING 统计
@@ -261,9 +261,9 @@ watch -n 2 'ethtool -S enp3s0 | grep -i "rx_dropped\|rx_missed"'
 
 ---
 
-## 7. 日志管理与 Logrotate 轮转配置
+## 日志管理与 Logrotate 轮转配置
 
-### 7.1 配置 logrotate
+### 配置 logrotate
 
 ```bash
 cat > /etc/logrotate.d/ntopng << 'EOF'
@@ -291,7 +291,7 @@ logrotate -d /etc/logrotate.d/ntopng
 logrotate -f /etc/logrotate.d/ntopng
 ```
 
-### 7.2 Systemd Journald 日志容量约束（若未输出文件日志）
+### Systemd Journald 日志容量约束（若未输出文件日志）
 
 ```bash
 cat >> /etc/systemd/journald.conf << 'EOF'
